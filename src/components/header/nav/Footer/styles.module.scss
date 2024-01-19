@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 12px;
+  gap: 40px;
+  margin-top: 20px;
+
+  a {
+    transition: all 300ms;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #455ce9;
+    }
+  }
+}
