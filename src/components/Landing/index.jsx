@@ -23,10 +23,10 @@ export default function Home() {
         trigger: document.documentElement,
         start: 0,
         end: window.innerHeight,
-        scrub: 0.5,
+        scrub: 0.25,
         onUpdate: (e) => (direction = e.direction * -1),
       },
-      x: "-=10px",
+      x: "-=100px",
     });
   }, []);
 
@@ -41,7 +41,7 @@ export default function Home() {
 
     gsap.set(firtsText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.04 * direction;
+    xPercent += 0.07 * direction;
     requestAnimationFrame(animation);
   };
 
