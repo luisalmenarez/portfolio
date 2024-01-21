@@ -26,13 +26,13 @@ export default function index() {
   ];
 
   return (
-    <motion.div
+    <motion.aside
       variants={menuSlide}
       animate="enter"
       exit="exit"
       initial="initial"
       className={styles.menu}>
-      <div className={styles.body}>
+      <nav className={styles.body}>
         <div className={styles.nav}>
           <div className={styles.header}>
             <p>Navigation</p>
@@ -42,8 +42,8 @@ export default function index() {
           })}
         </div>
         <Footer />
-      </div>
+      </nav>
       <Curve />
-    </motion.div>
+    </motion.aside>
   );
 }
