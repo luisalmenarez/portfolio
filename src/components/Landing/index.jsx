@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Index() {
+export default function Home() {
   const firtsText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
