@@ -44,8 +44,8 @@ export default function Home() {
   };
 
   return (
-    <section className={styles.main}>
-      <Image fill={true} src="/images/hero.jpg" alt="Hero Image" />
+    <section className={styles.landing}>
+      <Image fill={true} src="/images/bg.jpg" alt="Hero Image" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firtsText}>Luis Almenarez - Software Developer</p>
