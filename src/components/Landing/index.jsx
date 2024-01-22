@@ -16,32 +16,30 @@ export default function Home() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    requestAnimationFrame(animation);
 
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
+        scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        scrub: 0.25,
         onUpdate: (e) => (direction = e.direction * -1),
       },
       x: "-=100px",
     });
+    requestAnimationFrame(animation);
   }, []);
 
   const animation = () => {
     if (xPercent <= -100) {
       xPercent = 0;
-    }
-
-    if (xPercent > 0) {
+    } else if (xPercent > 0) {
       xPercent = -100;
     }
 
     gsap.set(firtsText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.07 * direction;
+    xPercent += 0.1 * direction;
     requestAnimationFrame(animation);
   };
 

@@ -1,18 +1,27 @@
-import Link from "next/link";
 import styles from "./style.module.scss";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { slide } from "../anim";
+import { slide, scale } from "../anim";
 
-export default function index({ data }) {
+export default function Index({ data, isActive, setSelectedIndicator }) {
+  const { title, href, index } = data;
+
   return (
     <motion.div
-      custom={data.index}
+      className={styles.link}
+      onMouseEnter={() => {
+        setSelectedIndicator(href);
+      }}
+      custom={index}
       variants={slide}
-      animate="enter"
-      exit="exit"
       initial="initial"
-      className={styles.link}>
-      <Link href={data.href}>{data.title}</Link>
+      animate="enter"
+      exit="exit">
+      <motion.div
+        variants={scale}
+        animate={isActive ? "open" : "closed"}
+        className={styles.indicator}></motion.div>
+      <Link href={href}>{title}</Link>
     </motion.div>
   );
 }

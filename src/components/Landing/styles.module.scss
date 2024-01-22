@@ -1,8 +1,8 @@
 .main {
   position: relative;
   display: flex;
-  margin-bottom: 100dvh;
-  height: 120dvh;
+  margin-bottom: 100vh;
+  height: 120vh;
   z-index: 1;
   overflow: hidden;
 
@@ -12,7 +12,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100dvh - 20rem);
+    top: calc(100vh - 20rem);
   }
 
   .slider {
