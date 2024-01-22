@@ -12,7 +12,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100vh - 20rem);
+    top: calc(100vh - 23rem);
   }
 
   .slider {
@@ -23,8 +23,8 @@
       position: relative;
       margin: 0px;
       color: white;
-      font-size: 15rem;
-      font-weight: 600;
+      font-size: 16rem;
+      font-weight: 500;
       padding-right: 5rem;
 
       &:nth-of-type(2) {
