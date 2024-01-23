@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   height: 120vh;
-  margin-bottom: 120vh;
   overflow: hidden;
 
   img {
@@ -21,7 +20,7 @@
     p {
       position: relative;
       margin: 0px;
-      color: white;
+      color: #fff;
       font-size: 16rem;
       font-weight: 500;
       padding-right: 5rem;
@@ -31,6 +30,27 @@
         left: 100%;
         top: 0;
       }
+    }
+  }
+  .description {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    @media (max-width: 768px) {
+      font-size: 4rem;
+      top: 30%;
+      left: 20%;
+    }
+    p {
+      margin: 0px;
+      margin-bottom: 1rem;
+    }
+    svg {
+      transform: scale(2);
+      margin-bottom: 5rem;
     }
   }
 }

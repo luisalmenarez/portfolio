@@ -22,8 +22,8 @@ export default function Home() {
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
+        start: "150px top",
+        end: "bottom bottom",
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
