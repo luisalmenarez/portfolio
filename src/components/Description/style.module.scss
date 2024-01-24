@@ -1,0 +1,60 @@
+.description {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  .body {
+    max-width: 100rem;
+    display: flex;
+    gap: 5rem;
+    position: relative;
+    p {
+      margin: 0px;
+      &:nth-of-type(1) {
+        font-size: 3rem;
+        gap: 0.8rem;
+        line-height: 1.3;
+        span {
+          margin-right: 3px;
+        }
+        .mask {
+          position: relative;
+          overflow: hidden;
+          display: inline-flex;
+        }
+      }
+      &:nth-of-type(2) {
+        font-size: 1.5rem;
+        width: 80%;
+        font-weight: 300;
+      }
+    }
+    .button {
+      top: 70%;
+      left: calc(100% - 20rem);
+      width: 18rem;
+      height: 18rem;
+      background-color: #1c1d20;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+  .moreWork {
+    padding: 2rem;
+    border-radius: 4rem;
+    border: 1px solid grey;
+  }
+}
