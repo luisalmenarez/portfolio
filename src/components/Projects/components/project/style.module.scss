@@ -1,0 +1,38 @@
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem 5rem 10rem;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  h2 {
+    font-size: 6rem;
+    margin: 0px;
+    font-weight: 550;
+    transition: all 0.4s;
+  }
+
+  p {
+    transition: all 0.4s;
+    font-weight: 300;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgb(201, 201, 201);
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+    h2 {
+      transform: translateX(-1rem);
+    }
+
+    p {
+      transform: translateX(1rem);
+    }
+  }
+}
