@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { slideUp, opacity } from "./animation";
 import { useRef } from "react";
 import Rounded from "@/common/RoundedButton";
+import Link from "next/link";
 
 export default function Index() {
   const phrase =
@@ -37,9 +38,11 @@ export default function Index() {
           me in a unique place in the web design world.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
-          <Rounded className={styles.button}>
-            <p>About me</p>
-          </Rounded>
+          <Link href="/about">
+            <Rounded className={styles.button}>
+              <p>About me</p>
+            </Rounded>
+          </Link>
         </div>
       </div>
     </div>

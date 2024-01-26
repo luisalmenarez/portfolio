@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
+import Link from "next/link";
 
 const projects = [
   {
@@ -122,9 +123,12 @@ export default function Home() {
           );
         })}
       </div>
-      <Rounded>
-        <p>More work</p>
-      </Rounded>
+      <Link href="/work" className={styles.link}>
+        <Rounded>
+          <p>More Work</p>
+        </Rounded>
+      </Link>
+
       <>
         <motion.div
           ref={modalContainer}

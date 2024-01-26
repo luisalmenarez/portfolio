@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Landing from "@/components/Landing";
 import Projects from "@/components/Projects";
 import Description from "@/components/Description";
+import SlidingImages from "@/components/SlidingImages";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,7 @@ export default function Home() {
       <Landing />
       <Description />
       <Projects />
+      <SlidingImages />
     </main>
   );
 }
