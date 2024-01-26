@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
-import { menuSlide } from "../anim";
+import { menuSlide } from "../../animation";
 import Link from "next/link";
 
 export default function index() {

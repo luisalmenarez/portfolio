@@ -1,9 +1,26 @@
+"use client";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 import Landing from "@/components/Landing";
-import Description from "@/components/Description";
 import Projects from "@/components/Projects";
+import Description from "@/components/Description";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 1500);
+    })();
+  }, []);
+
   return (
     <main className={styles.main}>
       <Landing />

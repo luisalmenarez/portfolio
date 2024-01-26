@@ -2,10 +2,11 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./style.module.scss";
 import { usePathname } from "next/navigation";
+import { AnimatePresence } from "framer-motion";
 import Nav from "./nav/index";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AnimatePresence } from "framer-motion";
+import Rounded from "@/common/RoundedButton";
 
 export default function Home() {
   const header = useRef(null);
@@ -70,16 +71,16 @@ export default function Home() {
       </header>
 
       <section ref={button} className={styles.headerButtonContainer}>
-        <div
+        <Rounded
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className={styles.button}>
+          className={`${styles.button}`}>
           <div
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ""
             }`}></div>
-        </div>
+        </Rounded>
       </section>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>

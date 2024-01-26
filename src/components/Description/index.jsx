@@ -3,6 +3,7 @@ import styles from "./style.module.scss";
 import { motion, useInView } from "framer-motion";
 import { slideUp, opacity } from "./animation";
 import { useRef } from "react";
+import Rounded from "@/common/RoundedButton";
 
 export default function Index() {
   const phrase =
@@ -36,9 +37,9 @@ export default function Index() {
           me in a unique place in the web design world.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
-          <div className={styles.button}>
+          <Rounded className={styles.button}>
             <p>About me</p>
-          </div>
+          </Rounded>
         </div>
       </div>
     </div>

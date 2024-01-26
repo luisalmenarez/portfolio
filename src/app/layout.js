@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import Header from "../components/header";
-import Hero from "../components/Landing";
 const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata = {
   title: "Luis Almenarez - Software Developer",
