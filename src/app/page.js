@@ -5,6 +5,7 @@ import Landing from "@/components/Landing";
 import Projects from "@/components/Projects";
 import Description from "@/components/Description";
 import SlidingImages from "@/components/SlidingImages";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
       <Description />
       <Projects />
       <SlidingImages />
+      <Contact />
     </main>
   );
 }

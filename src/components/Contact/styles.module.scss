@@ -1,0 +1,130 @@
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #141516;
+  position: relative;
+  .body {
+    padding-top: 25rem;
+    width: 100%;
+    max-width: 140rem;
+    background-color: #141516;
+
+    .title {
+      border-bottom: 1px solid rgb(134, 134, 134);
+      padding-bottom: 10rem;
+      margin-left: 20rem;
+      margin-right: 20rem;
+      position: relative;
+      span {
+        display: flex;
+        align-items: center;
+        .imageContainer {
+          width: 10rem;
+          height: 10rem;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+          }
+        }
+        h2 {
+          margin-left: 0.3em;
+        }
+      }
+      h2 {
+        font-size: 4.5vw;
+        margin: 0px;
+        font-weight: 500;
+      }
+      .buttonContainer {
+        position: absolute;
+        left: calc(100% - 40rem);
+        top: calc(100% - 7.5rem);
+      }
+      .button {
+        width: 18rem;
+        height: 18rem;
+        background-color: #455ce9;
+        color: white;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        p {
+          margin: 0px;
+          font-size: 1.5rem;
+          font-weight: 300;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 30%;
+        left: 100%;
+      }
+    }
+    .nav {
+      display: flex;
+      gap: 2rem;
+      margin-top: 10rem;
+      margin-left: 20rem;
+      margin-right: 20rem;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding: 2rem;
+
+      div {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+        p,
+        h3 {
+          margin: 0px;
+          padding: 2.5px;
+          cursor: pointer;
+        }
+        p {
+          &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        h3 {
+          color: grey;
+          cursor: default;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

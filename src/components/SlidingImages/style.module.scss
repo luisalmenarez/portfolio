@@ -6,22 +6,25 @@
   margin-top: 20rem;
   background-color: white;
   z-index: 1;
+
   .slider {
     display: flex;
     position: relative;
     gap: 3vw;
     width: 120vw;
     left: -10vw;
+    overflow-x: hidden;
     .project {
       width: 25%;
       height: 20vw;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow-x: hidden;
       .imageContainer {
         position: relative;
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         img {
           object-fit: cover;
         }
@@ -29,9 +32,9 @@
     }
   }
   .circleContainer {
-    background-color: red;
     position: relative;
     margin-top: 5rem;
+
     .circle {
       height: 1550%;
       width: 120%;
