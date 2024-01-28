@@ -7,17 +7,6 @@ import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 export default function Index() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const newTime = new Date();
-      if (newTime.getTime() !== currentTime.getTime()) {
-        setCurrentTime(newTime);
-      }
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [currentTime]);
-
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -32,7 +21,7 @@ export default function Index() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/background.jpg`} />
+              <Image fill={true} alt={"image"} src={`/images/bg.jpg`} />
             </div>
             <h2>Trabajemos juntos</h2>
           </span>
@@ -70,13 +59,8 @@ export default function Index() {
               <p>2024 © Edition</p>
             </span>
             <span>
-              <h3>Hora Local</h3>
-              <p>
-                {currentTime.toLocaleTimeString("en-US", {
-                  hour12: true,
-                  timeZone: "America/Bogota",
-                })}
-              </p>
+              <h3>Locación</h3>
+              <p>Medellín - Colombia</p>
             </span>
           </div>
           <div>
