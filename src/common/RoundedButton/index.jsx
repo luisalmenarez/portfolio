@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 import gsap from "gsap";
+import Magnetic from "@/common/Magnetic";
 
 export default function Home({
   children,
@@ -38,21 +39,23 @@ export default function Home({
   };
 
   return (
-    <div
-      className={styles.roundedButton}
-      style={{ overflow: "hidden" }}
-      onMouseEnter={() => {
-        manageMouseEnter();
-      }}
-      onMouseLeave={() => {
-        manageMouseLeave();
-      }}
-      {...attributes}>
-      {children}
+    <Magnetic>
       <div
-        ref={circle}
-        style={{ backgroundColor }}
-        className={styles.circle}></div>
-    </div>
+        className={styles.roundedButton}
+        style={{ overflow: "hidden" }}
+        onMouseEnter={() => {
+          manageMouseEnter();
+        }}
+        onMouseLeave={() => {
+          manageMouseLeave();
+        }}
+        {...attributes}>
+        {children}
+        <div
+          ref={circle}
+          style={{ backgroundColor }}
+          className={styles.circle}></div>
+      </div>
+    </Magnetic>
   );
 }

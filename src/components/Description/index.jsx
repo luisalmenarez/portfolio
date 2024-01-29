@@ -38,11 +38,11 @@ export default function Index() {
           me in a unique place in the web design world.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
-          <Link href="/about">
-            <Rounded className={styles.button}>
-              <p>About me</p>
-            </Rounded>
-          </Link>
+          {/* <Link href="/about"> */}
+          <Rounded className={styles.button}>
+            <p>About me</p>
+          </Rounded>
+          {/* </Link> */}
         </div>
       </div>
     </div>

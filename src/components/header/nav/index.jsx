@@ -6,6 +6,7 @@ import { menuSlide } from "../animation";
 import Link from "./Link";
 import Curve from "./curve";
 import Footer from "./Footer";
+import Magnetic from "@/common/Magnetic";
 
 const navItems = [
   {
@@ -52,7 +53,8 @@ export default function Index() {
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator === data.href}
-                setSelectedIndicator={setSelectedIndicator}></Link>
+                setSelectedIndicator={setSelectedIndicator}
+              />
             );
           })}
         </div>

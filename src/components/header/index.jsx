@@ -7,6 +7,7 @@ import Nav from "./nav/index";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "@/common/RoundedButton";
+import Magnetic from "@/common/Magnetic";
 
 export default function Home() {
   const header = useRef(null);
@@ -46,27 +47,35 @@ export default function Home() {
   return (
     <>
       <header ref={header} className={styles.header}>
-        <article className={styles.logo}>
-          <p className={styles.copyright}>&copy;</p>
-          <div className={styles.name}>
-            <p className={styles.codeBy}>Code by</p>
-            <p className={styles.luis}>Luis</p>
-            <p className={styles.almenarez}>Almenarez</p>
-          </div>
-        </article>
+        <Magnetic>
+          <article className={styles.logo}>
+            <p className={styles.copyright}>&copy;</p>
+            <div className={styles.name}>
+              <p className={styles.codeBy}>Code by</p>
+              <p className={styles.luis}>Luis</p>
+              <p className={styles.almenarez}>Almenarez</p>
+            </div>
+          </article>
+        </Magnetic>
         <article className={styles.nav}>
-          <div className={styles.el}>
-            <a>Work</a>
-            <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.el}>
-            <a>About</a>
-            <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.el}>
-            <a>Contact</a>
-            <div className={styles.indicator}></div>
-          </div>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>Work</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>About</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>Contact</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
         </article>
       </header>
 
