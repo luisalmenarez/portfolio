@@ -85,6 +85,8 @@
       padding: 2rem;
 
       div {
+        font-weight: 500;
+        font-size: 1.5rem;
         display: flex;
         gap: 2rem;
         align-items: flex-end;
@@ -116,7 +118,29 @@
         span {
           display: flex;
           flex-direction: column;
+          align-items: center;
           gap: 1.5rem;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
         }
         h3 {
           color: grey;

@@ -3,6 +3,8 @@ import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import Link from "next/link";
+import Magnetic from "@/common/Magnetic";
 
 export default function Index() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -66,11 +68,31 @@ export default function Index() {
           <div>
             <span>
               <h3>socials</h3>
-              <p>Github</p>
+              <Magnetic>
+                <Link href="https://github.com/luisalmenarez" target="_blank">
+                  Github
+                </Link>
+              </Magnetic>
             </span>
-            <p>Linkedin</p>
-            <p>Instagram</p>
-            <p>Twitter</p>
+            <Magnetic>
+              <Link
+                href="https://www.linkedin.com/in/luisalmenarez/"
+                target="_blank">
+                Linkedin
+              </Link>
+            </Magnetic>
+            <Magnetic>
+              <Link
+                href="https://www.instagram.com/_luisalmenarez/"
+                target="_blank">
+                Instagram
+              </Link>
+            </Magnetic>
+            <Magnetic>
+              <Link href="https://twitter.com/_luisalmenarez" target="_blank">
+                Twitter
+              </Link>
+            </Magnetic>
           </div>
         </div>
       </div>
