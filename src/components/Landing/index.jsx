@@ -48,8 +48,8 @@ export default function Home() {
       <Image fill={true} src="/images/bg.jpg" alt="Hero Image" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firtsText}>Luis Almenarez - Desarrollador Software</p>
-          <p ref={secondText}>Luis Almenarez - Desarrollador Software</p>
+          <p ref={firtsText}>Luis Almenarez — Desarrollador Software</p>
+          <p ref={secondText}>Luis Almenarez — Desarrollador Software</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>

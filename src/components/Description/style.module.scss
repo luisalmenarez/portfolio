@@ -1,14 +1,24 @@
 .description {
-  padding-left: 20rem;
-  padding-right: 20rem;
-  margin-top: 15rem;
+  padding: 15rem 0 15rem 0;
   display: flex;
   justify-content: center;
+
   .body {
-    max-width: 100rem;
+    position: relative;
+    max-width: 120rem;
     display: flex;
     gap: 5rem;
-    position: relative;
+    padding: 0 12rem 0 12rem;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      padding: 0 4rem 0 4rem;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     p {
       margin: 0px;
       &:nth-of-type(1) {
@@ -31,7 +41,7 @@
       }
     }
     .button {
-      top: 70%;
+      top: 90%;
       left: calc(100% - 20rem);
       width: 18rem;
       height: 18rem;
@@ -43,6 +53,10 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+
+      @media (max-width: 1024px) {
+        top: 120%;
+      }
       p {
         margin: 0px;
         font-size: 1.5rem;
