@@ -3,6 +3,12 @@
   display: flex;
   height: 120vh;
   overflow: hidden;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+  @media (max-width: 480px) {
+    height: 90vh;
+  }
 
   img {
     object-fit: cover;
@@ -11,6 +17,12 @@
   .sliderContainer {
     position: absolute;
     top: calc(100vh - 23rem);
+    @media (max-width: 768px) {
+      top: calc(100vh - 42rem);
+    }
+    @media (max-width: 480px) {
+      top: calc(100vh - 55rem);
+    }
   }
 
   .slider {
@@ -40,9 +52,14 @@
     font-size: 2.5rem;
     font-weight: 600;
     @media (max-width: 768px) {
-      font-size: 4rem;
-      top: 30%;
-      left: 20%;
+      font-size: 3.5rem;
+      top: 80%;
+      left: 10%;
+    }
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+      top: 75%;
+      left: 5%;
     }
     p {
       margin: 0px;
@@ -51,6 +68,9 @@
     svg {
       transform: scale(2);
       margin-bottom: 5rem;
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }

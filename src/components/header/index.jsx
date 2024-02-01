@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./style.module.scss";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Nav from "./nav/index";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "@/common/RoundedButton";
 import Magnetic from "@/common/Magnetic";
 
@@ -21,6 +21,7 @@ export default function Home() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
@@ -77,6 +78,16 @@ export default function Home() {
             </div>
           </Magnetic>
         </article>
+        <Magnetic>
+          <div className={styles.menuSmall}>
+            <p
+              onClick={() => {
+                setIsActive(!isActive);
+              }}>
+              Menu
+            </p>
+          </div>
+        </Magnetic>
       </header>
 
       <section ref={button} className={styles.headerButtonContainer}>
@@ -84,7 +95,7 @@ export default function Home() {
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className={`${styles.button}`}>
+          className={`${styles.button} ${isActive ? styles.buttonActive : ""}`}>
           <div
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ""
