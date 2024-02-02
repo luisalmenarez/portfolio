@@ -1,19 +1,28 @@
 .projects {
   display: flex;
   align-items: center;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
   flex-direction: column;
-  margin-top: 300px;
+  margin-top: 10rem;
+
+  @media (max-width: 1024px) {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    padding: 0;
+  }
 
   h5 {
-    font-weight: 450;
-    font-style: normal;
     font-size: 1.5rem;
+    font-weight: bold;
+    color: #455ce9;
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    opacity: 0.5;
   }
 
   .link {
@@ -34,7 +43,7 @@
   }
 
   .modalContainer {
-    height: 30rem;
+    height: 25rem;
     width: 40rem;
     position: fixed;
     top: 50%;
@@ -43,6 +52,9 @@
     pointer-events: none;
     overflow: hidden;
     z-index: 3;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .modalSlider {

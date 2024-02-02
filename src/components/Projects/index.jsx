@@ -3,6 +3,8 @@ import styles from "./style.module.scss";
 import { useState, useEffect, useRef } from "react";
 import Project from "./components/project";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+import ResponsiveProjects from "./components/ResponsiveProject";
 import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
@@ -48,6 +50,7 @@ const scaleAnimation = {
 };
 
 export default function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const [modal, setModal] = useState({ active: false, index: 0 });
   const { active, index } = modal;
   const modalContainer = useRef(null);
@@ -110,19 +113,23 @@ export default function Home() {
         moveItems(e.clientX, e.clientY);
       }}
       className={styles.projects}>
-      <h5>Recent Work</h5>
-      <div className={styles.body}>
-        {projects.map((project, index) => {
-          return (
-            <Project
-              index={index}
-              title={project.title}
-              manageModal={manageModal}
-              key={index}
-            />
-          );
-        })}
-      </div>
+      <h5>Proyectos recientes</h5>
+      {isMobile ? (
+        <ResponsiveProjects manageModal={manageModal} modal={modal} />
+      ) : (
+        <div className={styles.body}>
+          {projects.map((project, index) => {
+            return (
+              <Project
+                index={index}
+                title={project.title}
+                manageModal={manageModal}
+                key={index}
+              />
+            );
+          })}
+        </div>
+      )}
       <Link href="/work" className={styles.link}>
         <Rounded>
           <p>More Work</p>
