@@ -23,7 +23,12 @@ export default function Index() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/bg.jpg`} />
+              <Image
+                loading="lazy"
+                fill={true}
+                alt={"image"}
+                src={`/images/bg.jpg`}
+              />
             </div>
             <h2>Trabajemos juntos</h2>
           </span>

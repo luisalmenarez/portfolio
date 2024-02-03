@@ -9,7 +9,7 @@ export default function index({ index, title, manageModal, image }) {
 
   return (
     <section className={styles.containerSmallProject}>
-      <div
+      <section
         onMouseEnter={(e) => {
           manageModal(true, index, e.clientX, e.clientY);
         }}
@@ -24,7 +24,7 @@ export default function index({ index, title, manageModal, image }) {
           width={originalWidth}
           height={originalHeight}
         />
-      </div>
+      </section>
       <h2>{title}</h2>
       <p>Diseño & Desarollo</p>
     </section>

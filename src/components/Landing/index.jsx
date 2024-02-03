@@ -1,15 +1,14 @@
 "use client";
-
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Home() {
-  const firtsText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
+export default function Landing() {
+  const firstTextRef = useRef(null);
+  const secondTextRef = useRef(null);
+  const sliderRef = useRef(null);
 
   let xPercent = 0;
   let direction = -1;
@@ -17,7 +16,9 @@ export default function Home() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(slider.current, {
+    const slider = sliderRef.current;
+
+    gsap.to(slider, {
       scrollTrigger: {
         trigger: document.documentElement,
         scrub: 0.25,
@@ -27,18 +28,26 @@ export default function Home() {
       },
       x: "-=100px",
     });
+
     requestAnimationFrame(animation);
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   const animation = () => {
+    const firstText = firstTextRef.current;
+    const secondText = secondTextRef.current;
+
     if (xPercent <= -100) {
       xPercent = 0;
     } else if (xPercent > 0) {
       xPercent = -100;
     }
 
-    gsap.set(firtsText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
+    gsap.set(firstText, { xPercent: xPercent });
+    gsap.set(secondText, { xPercent: xPercent });
     xPercent += 0.05 * direction;
     requestAnimationFrame(animation);
   };
@@ -47,9 +56,9 @@ export default function Home() {
     <section className={styles.landing}>
       <Image fill={true} src="/images/bg.jpg" alt="Hero Image" />
       <div className={styles.sliderContainer}>
-        <div ref={slider} className={styles.slider}>
-          <p ref={firtsText}>Luis Almenarez — Desarrollador Software</p>
-          <p ref={secondText}>Luis Almenarez — Desarrollador Software</p>
+        <div ref={sliderRef} className={styles.slider}>
+          <p ref={firstTextRef}>Luis Almenarez — Desarrollador Software</p>
+          <p ref={secondTextRef}>Luis Almenarez — Desarrollador Software</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>

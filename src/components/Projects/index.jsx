@@ -49,7 +49,7 @@ const scaleAnimation = {
   },
 };
 
-export default function Home() {
+export default function Projects() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [modal, setModal] = useState({ active: false, index: 0 });
   const { active, index } = modal;
@@ -65,33 +65,39 @@ export default function Home() {
   let yMoveCursorLabel = useRef(null);
 
   useEffect(() => {
-    //Move Container
-    xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {
-      duration: 0.8,
-      ease: "power3",
-    });
-    yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", {
-      duration: 0.8,
-      ease: "power3",
-    });
-    //Move cursor
-    xMoveCursor.current = gsap.quickTo(cursor.current, "left", {
-      duration: 0.5,
-      ease: "power3",
-    });
-    yMoveCursor.current = gsap.quickTo(cursor.current, "top", {
-      duration: 0.5,
-      ease: "power3",
-    });
-    //Move cursor label
-    xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {
-      duration: 0.45,
-      ease: "power3",
-    });
-    yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "top", {
-      duration: 0.45,
-      ease: "power3",
-    });
+    const initAnimations = () => {
+      if (typeof window !== "undefined" && typeof document !== "undefined") {
+        //Move Container
+        xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {
+          duration: 0.8,
+          ease: "power3",
+        });
+        yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", {
+          duration: 0.8,
+          ease: "power3",
+        });
+        //Move cursor
+        xMoveCursor.current = gsap.quickTo(cursor.current, "left", {
+          duration: 0.5,
+          ease: "power3",
+        });
+        yMoveCursor.current = gsap.quickTo(cursor.current, "top", {
+          duration: 0.5,
+          ease: "power3",
+        });
+        //Move cursor label
+        xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {
+          duration: 0.45,
+          ease: "power3",
+        });
+        yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "top", {
+          duration: 0.45,
+          ease: "power3",
+        });
+      }
+    };
+
+    initAnimations();
   }, []);
 
   const moveItems = (x, y) => {
@@ -102,6 +108,7 @@ export default function Home() {
     xMoveCursorLabel.current(x);
     yMoveCursorLabel.current(y);
   };
+
   const manageModal = (active, index, x, y) => {
     moveItems(x, y);
     setModal({ active, index });
@@ -117,18 +124,16 @@ export default function Home() {
       {isMobile ? (
         <ResponsiveProjects manageModal={manageModal} modal={modal} />
       ) : (
-        <div className={styles.body}>
-          {projects.map((project, index) => {
-            return (
-              <Project
-                index={index}
-                title={project.title}
-                manageModal={manageModal}
-                key={index}
-              />
-            );
-          })}
-        </div>
+        <section className={styles.body}>
+          {projects.map((project, index) => (
+            <Project
+              index={index}
+              title={project.title}
+              manageModal={manageModal}
+              key={index}
+            />
+          ))}
+        </section>
       )}
       <Link href="/work" className={styles.link}>
         <Rounded>
@@ -137,47 +142,44 @@ export default function Home() {
       </Link>
 
       <>
-        <motion.div
+        <motion.section
           ref={modalContainer}
           variants={scaleAnimation}
           initial="initial"
           animate={active ? "enter" : "closed"}
           className={styles.modalContainer}>
-          <div
+          <section
             style={{ top: index * -100 + "%" }}
             className={styles.modalSlider}>
-            {projects.map((project, index) => {
-              const { src, color } = project;
-              return (
-                <div
-                  className={styles.modal}
-                  style={{ backgroundColor: color }}
-                  key={`modal_${index}`}>
-                  <Image
-                    src={`/images/${src}`}
-                    width={300}
-                    height={0}
-                    alt="image"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
-        <motion.div
+            {projects.map((project, index) => (
+              <section
+                className={styles.modal}
+                style={{ backgroundColor: project.color }}
+                key={`modal_${index}`}>
+                <Image
+                  src={`/images/${project.src}`}
+                  width={300}
+                  height={0}
+                  alt="image"
+                />
+              </section>
+            ))}
+          </section>
+        </motion.section>
+        <motion.section
           ref={cursor}
           className={styles.cursor}
           variants={scaleAnimation}
           initial="initial"
-          animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div
+          animate={active ? "enter" : "closed"}></motion.section>
+        <motion.section
           ref={cursorLabel}
           className={styles.cursorLabel}
           variants={scaleAnimation}
           initial="initial"
           animate={active ? "enter" : "closed"}>
           View
-        </motion.div>
+        </motion.section>
       </>
     </section>
   );

@@ -13,7 +13,7 @@ const words = [
   "Developer",
 ];
 
-export default function Index() {
+export default function Preloader() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -22,13 +22,13 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-    if (index == words.length - 1) return;
-    setTimeout(
-      () => {
-        setIndex(index + 1);
-      },
-      index == 0 ? 1000 : 150
+    if (index === words.length - 1) return;
+    const timeout = setTimeout(
+      () => setIndex(index + 1),
+      index === 0 ? 1000 : 150
     );
+
+    return () => clearTimeout(timeout);
   }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${

@@ -110,11 +110,13 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
         initial="initial"
         animate={active ? "enter" : "closed"}
         className={styles.containerModal}>
-        <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
+        <section
+          style={{ top: index * -100 + "%" }}
+          className={styles.modalSlider}>
           {projects.map((project, index) => {
             const { src, color } = project;
             return (
-              <div
+              <section
                 className={styles.modal}
                 style={{ backgroundColor: color }}
                 key={`modal_${index}`}>
@@ -124,10 +126,10 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
                   height={0}
                   alt="image"
                 />
-              </div>
+              </section>
             );
           })}
-        </div>
+        </section>
       </motion.section>
       <motion.section
         ref={cursor}

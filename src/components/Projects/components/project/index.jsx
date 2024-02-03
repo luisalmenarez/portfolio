@@ -2,18 +2,18 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-export default function index({ index, title, manageModal }) {
+export default function Project({ index, title, manageModal }) {
+  const handleMouseAction = (active, e) => {
+    manageModal(active, index, e.clientX, e.clientY);
+  };
+
   return (
-    <div
-      onMouseEnter={(e) => {
-        manageModal(true, index, e.clientX, e.clientY);
-      }}
-      onMouseLeave={(e) => {
-        manageModal(false, index, e.clientX, e.clientY);
-      }}
+    <section
+      onMouseEnter={(e) => handleMouseAction(true, e)}
+      onMouseLeave={(e) => handleMouseAction(false, e)}
       className={styles.project}>
       <h2>{title}</h2>
-      <p>Diseño & Desarollo</p>
-    </div>
+      <p>Diseño & Desarrollo</p>
+    </section>
   );
 }
