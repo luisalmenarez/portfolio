@@ -8,14 +8,23 @@ import SlidingImages from "@/components/SlidingImages";
 import Contact from "@/components/Contact";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
+import LocomotiveScroll from "locomotive-scroll";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector(".main"),
+        smooth: true,
+        smoothMobile: true,
+        touch: {
+          enabled: true,
+          sensitivity: 1.5,
+          touchMultiplier: 5,
+        },
+      });
 
       setTimeout(() => {
         setIsLoading(false);
