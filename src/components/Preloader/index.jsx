@@ -52,7 +52,7 @@ export default function Index() {
   };
 
   return (
-    <motion.section
+    <motion.div
       variants={slideUp}
       initial="initial"
       exit="exit"
@@ -71,6 +71,6 @@ export default function Index() {
           </svg>
         </>
       )}
-    </motion.section>
+    </motion.div>
   );
 }
