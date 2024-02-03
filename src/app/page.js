@@ -14,29 +14,31 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      if (
-        typeof window !== "undefined" &&
-        window.location.hostname !== "localhost"
-      ) {
-        const locomotiveScroll = new LocomotiveScroll({
-          el: document.querySelector(".main"),
-          smooth: true,
-          smoothMobile: true,
-          touch: {
-            enabled: true,
-            sensitivity: 1.5,
-            touchMultiplier: 5,
-          },
-        });
+    const initLocomotiveScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector(".main"),
+        smooth: true,
+        smoothMobile: true,
+        touch: {
+          enabled: true,
+          sensitivity: 1.5,
+          touchMultiplier: 5,
+        },
+      });
 
-        setTimeout(() => {
-          setIsLoading(false);
-          document.body.style.cursor = "default";
-          window.scrollTo(0, 0);
-        }, 1500);
-      }
-    })();
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 1500);
+    };
+
+    if (typeof window !== "undefined") {
+      initLocomotiveScroll();
+    } else {
+      setIsLoading(false);
+    }
   }, []);
 
   return (
