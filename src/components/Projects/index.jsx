@@ -132,7 +132,7 @@ export default function Home() {
       )}
       <Link href="/work" className={styles.link}>
         <Rounded>
-          <p>More Work</p>
+          <p>Más proyectos</p>
         </Rounded>
       </Link>
 
