@@ -15,7 +15,10 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
-      if (typeof window !== "undefined") {
+      if (
+        typeof window !== "undefined" &&
+        window.location.hostname !== "localhost"
+      ) {
         const locomotiveScroll = new LocomotiveScroll({
           el: document.querySelector(".main"),
           smooth: true,
