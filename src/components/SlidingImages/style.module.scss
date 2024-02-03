@@ -14,6 +14,15 @@
     width: 120vw;
     left: -10vw;
     overflow-x: hidden;
+
+    @media (max-width: 1024px) {
+      width: 160vw;
+      left: -25vw;
+    }
+    @media (max-width: 540px) {
+      display: none;
+    }
+
     .project {
       width: 25%;
       height: 20vw;
@@ -21,6 +30,12 @@
       align-items: center;
       justify-content: center;
       overflow-x: hidden;
+      @media (max-width: 1024px) {
+        height: 25vw;
+      }
+      @media (max-width: 768px) {
+        height: 30vw;
+      }
       .imageContainer {
         position: relative;
         width: 90%;
@@ -44,6 +59,14 @@
       z-index: 1;
       position: absolute;
       box-shadow: 0px 6rem 5rem rgba(0, 0, 0, 0.748);
+
+      @media (max-width: 768px) {
+        height: 900%;
+      }
+
+      @media (max-width: 540px) {
+        height: 600%;
+      }
     }
   }
 }
