@@ -90,7 +90,7 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
 
   return (
     <>
-      <div className={styles.bodySmall}>
+      <section className={styles.bodySmall}>
         {projects.map((project, index) => {
           return (
             <ProjectSmall
@@ -102,9 +102,9 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
             />
           );
         })}
-      </div>
+      </section>
 
-      <motion.div
+      <motion.section
         ref={containerModal}
         variants={scaleAnimation}
         initial="initial"
@@ -128,21 +128,21 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
             );
           })}
         </div>
-      </motion.div>
-      <motion.div
+      </motion.section>
+      <motion.section
         ref={cursor}
         className={styles.cursor}
         variants={scaleAnimation}
         initial="initial"
-        animate={active ? "enter" : "closed"}></motion.div>
-      <motion.div
+        animate={active ? "enter" : "closed"}></motion.section>
+      <motion.section
         ref={cursorLabel}
         className={styles.cursorLabel}
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}>
         View
-      </motion.div>
+      </motion.section>
     </>
   );
 };

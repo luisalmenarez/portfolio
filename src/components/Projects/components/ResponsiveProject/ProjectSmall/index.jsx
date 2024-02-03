@@ -8,27 +8,25 @@ export default function index({ index, title, manageModal, image }) {
   const originalHeight = 540;
 
   return (
-    <>
-      <section className={styles.containerSmallProject}>
-        <div
-          onMouseEnter={(e) => {
-            manageModal(true, index, e.clientX, e.clientY);
-          }}
-          onMouseLeave={(e) => {
-            manageModal(false, index, e.clientX, e.clientY);
-          }}
-          className={styles.projectSmall}>
-          <Image
-            src={image}
-            alt="Image Project Shop Tech"
-            layout="responsive"
-            width={originalWidth}
-            height={originalHeight}
-          />
-        </div>
-        <h2>{title}</h2>
-        <p>Diseño & Desarollo</p>
-      </section>
-    </>
+    <section className={styles.containerSmallProject}>
+      <div
+        onMouseEnter={(e) => {
+          manageModal(true, index, e.clientX, e.clientY);
+        }}
+        onMouseLeave={(e) => {
+          manageModal(false, index, e.clientX, e.clientY);
+        }}
+        className={styles.projectSmall}>
+        <Image
+          src={image}
+          alt="Image Project Shop Tech"
+          layout="responsive"
+          width={originalWidth}
+          height={originalHeight}
+        />
+      </div>
+      <h2>{title}</h2>
+      <p>Diseño & Desarollo</p>
+    </section>
   );
 }
