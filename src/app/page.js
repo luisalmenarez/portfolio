@@ -15,22 +15,24 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
-      const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector(".main"),
-        smooth: true,
-        smoothMobile: true,
-        touch: {
-          enabled: true,
-          sensitivity: 1.5,
-          touchMultiplier: 5,
-        },
-      });
+      if (typeof window !== "undefined") {
+        const locomotiveScroll = new LocomotiveScroll({
+          el: document.querySelector(".main"),
+          smooth: true,
+          smoothMobile: true,
+          touch: {
+            enabled: true,
+            sensitivity: 1.5,
+            touchMultiplier: 5,
+          },
+        });
 
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 1500);
+        setTimeout(() => {
+          setIsLoading(false);
+          document.body.style.cursor = "default";
+          window.scrollTo(0, 0);
+        }, 1500);
+      }
     })();
   }, []);
 
