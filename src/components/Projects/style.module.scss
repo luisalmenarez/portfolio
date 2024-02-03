@@ -16,6 +16,10 @@
     padding: 0;
   }
 
+  @media (max-width: 540px) {
+    margin-bottom: 10rem;
+  }
+
   h5 {
     font-size: 1.5rem;
     font-weight: bold;

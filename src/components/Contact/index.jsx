@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
-import { useEffect, useRef, useState } from "react";
-import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import { useRef, useState } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "@/common/Magnetic";
 

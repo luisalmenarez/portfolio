@@ -6,6 +6,9 @@
   margin-top: 20rem;
   background-color: white;
   z-index: 1;
+  @media (max-width: 540px) {
+    margin-top: 0;
+  }
 
   .slider {
     display: flex;
@@ -20,7 +23,8 @@
       left: -25vw;
     }
     @media (max-width: 540px) {
-      display: none;
+      width: 200vw;
+      left: -30vw;
     }
 
     .project {
@@ -36,6 +40,9 @@
       @media (max-width: 768px) {
         height: 30vw;
       }
+      @media (max-width: 540px) {
+        height: 35vw;
+      }
       .imageContainer {
         position: relative;
         width: 90%;
@@ -49,6 +56,9 @@
   .circleContainer {
     position: relative;
     margin-top: 5rem;
+    @media (max-width: 540px) {
+      margin-top: 0;
+    }
 
     .circle {
       height: 1550%;
