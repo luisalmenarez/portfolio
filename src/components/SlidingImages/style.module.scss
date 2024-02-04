@@ -5,7 +5,6 @@
   position: relative;
   margin-top: 20rem;
   background-color: white;
-  padding-top: 10rem;
   z-index: 1;
   @media (max-width: 540px) {
     margin-top: 0;
@@ -24,8 +23,9 @@
       left: -25vw;
     }
     @media (max-width: 540px) {
-      width: 200vw;
+      width: 300vw;
       left: -30vw;
+      padding-top: 5rem;
     }
 
     .project {
@@ -42,7 +42,7 @@
         height: 30vw;
       }
       @media (max-width: 540px) {
-        height: 35vw;
+        height: 60vw;
       }
       .imageContainer {
         position: relative;
