@@ -1,19 +1,27 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
-import { useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "@/common/Magnetic";
 
 export default function Index() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end end"],
+    touch: {
+      enabled: true,
+      sensitivity: 0.5,
+      touchMultiplier: 2,
+    },
   });
+
+  useEffect(() => {
+    container.current.style.minHeight = `${window.innerHeight}px`;
+  }, []);
+
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
