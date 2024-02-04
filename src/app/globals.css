@@ -16,5 +16,14 @@ body {
   margin: 0px;
   overflow-x: hidden; /* Hide scrollbars */
   height: 100%;
-  overscroll-behavior-y: none;
+  overscroll-behavior: none;
+}
+
+html[data-scroll-orientation="horizontal"] {
+  body {
+    width: fit-content;
+  }
+  [data-scroll-container] {
+    display: flex;
+  }
 }

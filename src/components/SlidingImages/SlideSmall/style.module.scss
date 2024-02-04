@@ -4,6 +4,9 @@
   position: relative;
   background-color: #ffff;
   z-index: 1;
+  @media (max-width: 480px) {
+    height: 18rem;
+  }
 }
 
 .circleContainer {
