@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
+import SlideSmall from "./SlideSmall";
 
 const slider1 = [
   {
@@ -42,6 +44,7 @@ const slider2 = [
 ];
 
 export default function Index() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -58,46 +61,52 @@ export default function Index() {
   const height = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
-    <section ref={container} className={styles.slidingImages}>
-      <motion.div style={{ x: x1 }} className={styles.slider}>
-        {slider1.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.project}
-              style={{ backgroundColor: project.color }}>
-              <div className={styles.imageContainer}>
-                <Image
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
-      <motion.div style={{ x: x2 }} className={styles.slider}>
-        {slider2.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.project}
-              style={{ backgroundColor: project.color }}>
-              <div key={index} className={styles.imageContainer}>
-                <Image
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
-      <motion.div style={{ height }} className={styles.circleContainer}>
-        <div className={styles.circle}></div>
-      </motion.div>
-    </section>
+    <>
+      {isMobile ? (
+        <SlideSmall />
+      ) : (
+        <section ref={container} className={styles.slidingImages}>
+          <motion.div style={{ x: x1 }} className={styles.slider}>
+            {slider1.map((project, index) => {
+              return (
+                <div
+                  key={index}
+                  className={styles.project}
+                  style={{ backgroundColor: project.color }}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      fill={true}
+                      alt={"image"}
+                      src={`/images/${project.src}`}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </motion.div>
+          <motion.div style={{ x: x2 }} className={styles.slider}>
+            {slider2.map((project, index) => {
+              return (
+                <div
+                  key={index}
+                  className={styles.project}
+                  style={{ backgroundColor: project.color }}>
+                  <div key={index} className={styles.imageContainer}>
+                    <Image
+                      fill={true}
+                      alt={"image"}
+                      src={`/images/${project.src}`}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </motion.div>
+          <motion.div style={{ height }} className={styles.circleContainer}>
+            <div className={styles.circle}></div>
+          </motion.div>
+        </section>
+      )}
+    </>
   );
 }
