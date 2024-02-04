@@ -46,6 +46,11 @@ export default function Index() {
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
+    touch: {
+      enabled: true,
+      sensitivity: 0.5,
+      touchMultiplier: 2,
+    },
   });
 
   const x1 = useTransform(scrollYProgress, [0, 1], [0, 250]);
