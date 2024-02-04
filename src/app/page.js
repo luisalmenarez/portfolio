@@ -31,7 +31,7 @@ export default function Home() {
           setIsLoading(false);
           document.body.style.cursor = "default";
           window.scrollTo(0, 0);
-        }, 1500);
+        }, 2000);
       }
     };
 

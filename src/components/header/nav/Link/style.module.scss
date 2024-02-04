@@ -10,5 +10,9 @@
     border-radius: 50%;
     position: absolute;
     left: -3rem;
+
+    @media (max-width: 540px) {
+      left: 30rem;
+    }
   }
 }

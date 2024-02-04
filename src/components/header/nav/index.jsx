@@ -6,7 +6,6 @@ import { menuSlide } from "../animation";
 import Link from "./Link";
 import Curve from "./curve";
 import Footer from "./Footer";
-import Magnetic from "@/common/Magnetic";
 
 const navItems = [
   {
@@ -45,7 +44,7 @@ export default function Index() {
           }}
           className={styles.nav}>
           <div className={styles.header}>
-            <p>Navigation</p>
+            <p>Menú</p>
           </div>
           {navItems.map((data, index) => {
             return (

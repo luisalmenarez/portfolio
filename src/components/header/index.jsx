@@ -14,10 +14,20 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
   useEffect(() => {
     if (isActive) setIsActive(false);
+    setIsOverlayVisible(isActive);
+
+    return () => {
+      setIsOverlayVisible(false);
+    };
   }, [pathname]);
+
+  useEffect(() => {
+    setIsOverlayVisible(isActive);
+  }, [isActive]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -89,6 +99,16 @@ export default function Home() {
           </div>
         </Magnetic>
       </header>
+
+      {isOverlayVisible && (
+        <div
+          className={styles.overlay}
+          onClick={() => {
+            setIsActive(false);
+            setIsOverlayVisible(false);
+          }}
+        />
+      )}
 
       <section ref={button} className={styles.headerButtonContainer}>
         <Rounded
