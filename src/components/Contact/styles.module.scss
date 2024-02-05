@@ -1,11 +1,8 @@
 .contact {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  color: #ffff;
   background-color: #141516;
-  position: relative;
   margin-top: 30rem;
   .body {
     padding-top: 25rem;
@@ -17,14 +14,13 @@
       padding-top: 20rem;
     }
     @media (max-width: 640px) {
-      padding-top: 10rem;
+      padding-top: 5rem;
     }
 
     .title {
       border-bottom: 1px solid rgb(134, 134, 134);
       padding-bottom: 10rem;
-      margin-left: 20rem;
-      margin-right: 20rem;
+      margin: 0 20rem 0 20rem;
       position: relative;
       @media (max-width: 1024px) {
         margin: 0 10rem 0 10rem;
@@ -52,11 +48,11 @@
           }
         }
         h2 {
-          margin-left: 0.3em;
+          margin-left: 1rem;
         }
       }
       h2 {
-        font-size: 4.5vw;
+        font-size: 5vw;
         margin: 0px;
         font-weight: 500;
         @media (max-width: 640px) {
@@ -77,15 +73,14 @@
         }
       }
       .button {
+        display: grid;
+        place-items: center;
         width: 17rem;
         height: 17rem;
         background-color: #455ce9;
         color: white;
         border-radius: 50%;
         position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         cursor: pointer;
         @media (max-width: 768px) {
           width: 13rem;
@@ -109,11 +104,8 @@
     .nav {
       display: flex;
       gap: 2rem;
-      margin-top: 8rem;
-      margin-left: 20rem;
-      margin-right: 20rem;
+      margin: 8rem 20rem 0 20rem;
       font-size: 1.5rem;
-
       @media (max-width: 1024px) {
         margin: 10rem 10rem 0 10rem;
       }
@@ -157,12 +149,7 @@
             padding: 3rem;
           }
         }
-        p,
-        h3 {
-          margin: 0px;
-          padding: 2.5px;
-          cursor: pointer;
-        }
+
         p {
           &::after {
             content: "";

@@ -25,9 +25,10 @@ export default function Index() {
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+
   return (
     <motion.section style={{ y }} ref={container} className={styles.contact}>
-      <div className={styles.body}>
+      <article className={styles.body}>
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
@@ -38,13 +39,15 @@ export default function Index() {
                 src={`/images/bg.jpg`}
               />
             </div>
-            <h2>Trabajemos juntos</h2>
+            <h2>Trabajemos</h2>
           </span>
-          <h2>Contáctame</h2>
+          <h2>Juntos</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
-            <Rounded backgroundColor={"#334BD3"} className={styles.button}>
-              <p>Contáctame</p>
-            </Rounded>
+            <Link href="/">
+              <Rounded backgroundColor={"#334BD3"} className={styles.button}>
+                <p>Contáctame</p>
+              </Rounded>
+            </Link>
           </motion.div>
           <motion.svg
             style={{ rotate, scale: 2 }}
@@ -59,15 +62,15 @@ export default function Index() {
             />
           </motion.svg>
         </div>
-        <div className={styles.nav}>
+        <nav className={styles.nav}>
           <Rounded>
             <p>luisalmenarez0428@gmail.com</p>
           </Rounded>
           <Rounded>
             <p>+57 300 284 12 19</p>
           </Rounded>
-        </div>
-        <div className={styles.info}>
+        </nav>
+        <footer className={styles.info}>
           <div>
             <span>
               <h3>Version</h3>
@@ -107,8 +110,8 @@ export default function Index() {
               </Link>
             </Magnetic>
           </div>
-        </div>
-      </div>
+        </footer>
+      </article>
     </motion.section>
   );
 }
