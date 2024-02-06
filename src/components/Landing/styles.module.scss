@@ -33,6 +33,9 @@
       font-size: 16rem;
       font-weight: 500;
       padding-right: 5rem;
+      @media (max-width: 480px) {
+        font-size: 14rem;
+      }
 
       &:nth-of-type(2) {
         position: absolute;
