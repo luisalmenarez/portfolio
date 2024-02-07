@@ -8,6 +8,7 @@ import Nav from "./nav/index";
 import gsap from "gsap";
 import Rounded from "@/common/RoundedButton";
 import Magnetic from "@/common/Magnetic";
+import Link from "next/link";
 
 export default function Home() {
   const header = useRef(null);
@@ -59,31 +60,35 @@ export default function Home() {
     <>
       <header ref={header} className={styles.header}>
         <Magnetic>
-          <article className={styles.logo}>
-            <p className={styles.copyright}>&copy;</p>
-            <div className={styles.name}>
-              <p className={styles.codeBy}>Code by</p>
-              <p className={styles.luis}>Luis</p>
-              <p className={styles.almenarez}>Almenarez</p>
-            </div>
-          </article>
+          <Link href="/">
+            <article className={styles.logo}>
+              <p className={styles.copyright}>&copy;</p>
+              <div className={styles.name}>
+                <p className={styles.codeBy}>Hecho por</p>
+                <p className={styles.luis}>Luis</p>
+                <p className={styles.almenarez}>Almenarez</p>
+              </div>
+            </article>
+          </Link>
         </Magnetic>
         <article className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <a>Work</a>
+              <Link href="/work">Proyectos</Link>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>About</a>
+              <Link href="/about">Sobre mí</Link>
+
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>Contact</a>
+              <Link href="/contact">Contacto</Link>
+
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>

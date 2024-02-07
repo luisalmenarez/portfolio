@@ -4,8 +4,10 @@
   justify-content: space-between;
   font-size: 1.2rem;
   gap: 4rem;
-  margin-bottom: 8rem;
-
+  margin-bottom: 0;
+  @media (max-width: 768px) {
+    margin-bottom: 8rem;
+  }
   a {
     text-decoration: none;
     color: #fff;

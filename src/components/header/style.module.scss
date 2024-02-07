@@ -11,6 +11,11 @@
   box-sizing: border-box;
   align-items: center;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .logo {
     display: flex;
     cursor: pointer;
@@ -50,7 +55,7 @@
           transform: translateX(-100%);
         }
         .luis {
-          transform: translateX(-6rem);
+          transform: translateX(-8rem);
         }
         .almenarez {
           transform: translateX(-8.2rem);

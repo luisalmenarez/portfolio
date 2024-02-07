@@ -26,6 +26,10 @@ export default function Index() {
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
 
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/573002841219", "_blank");
+  };
+
   return (
     <motion.section style={{ y }} ref={container} className={styles.contact}>
       <article className={styles.body}>
@@ -43,7 +47,7 @@ export default function Index() {
           </span>
           <h2>Juntos</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
-            <Link href="/">
+            <Link href="/contact">
               <Rounded backgroundColor={"#334BD3"} className={styles.button}>
                 <p>Contáctame</p>
               </Rounded>
@@ -63,17 +67,19 @@ export default function Index() {
           </motion.svg>
         </div>
         <nav className={styles.nav}>
-          <Rounded>
-            <p>luisalmenarez0428@gmail.com</p>
-          </Rounded>
-          <Rounded>
+          <Link href="mailto:luisalmenarez0428@gmail.com">
+            <Rounded>
+              <p>luisalmenarez0428@gmail.com</p>
+            </Rounded>
+          </Link>
+          <Rounded onClick={handleWhatsAppClick}>
             <p>+57 300 284 12 19</p>
           </Rounded>
         </nav>
         <footer className={styles.info}>
           <div>
             <span>
-              <h3>Version</h3>
+              <h3>Versión</h3>
               <p>2024 © Edition</p>
             </span>
             <span>
@@ -83,7 +89,7 @@ export default function Index() {
           </div>
           <div>
             <span>
-              <h3>socials</h3>
+              <h3>Socials</h3>
               <Magnetic>
                 <Link href="https://github.com/luisalmenarez" target="_blank">
                   Github
