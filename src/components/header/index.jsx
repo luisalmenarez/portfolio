@@ -11,6 +11,7 @@ import Magnetic from "@/common/Magnetic";
 import Link from "next/link";
 
 export default function Home() {
+  const [key, setKey] = useState(0);
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
@@ -19,6 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
+    setKey((prevKey) => prevKey + 1);
     setIsOverlayVisible(isActive);
 
     return () => {
@@ -54,7 +56,7 @@ export default function Home() {
         },
       },
     });
-  }, []);
+  }, [key]);
 
   return (
     <>

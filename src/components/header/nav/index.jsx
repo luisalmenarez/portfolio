@@ -9,19 +9,19 @@ import Footer from "./Footer";
 
 const navItems = [
   {
-    title: "Home",
+    title: "Inicio",
     href: "/",
   },
   {
-    title: "Work",
+    title: "Proyectos",
     href: "/work",
   },
   {
-    title: "About",
+    title: "Sobre mí",
     href: "/about",
   },
   {
-    title: "Contact",
+    title: "Contacto",
     href: "/contact",
   },
 ];
