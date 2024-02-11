@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { opacity } from "./anim";
 
-export default function Landing({ isLoading }) {
+export default function Landing() {
   const firstTextRef = useRef(null);
   const secondTextRef = useRef(null);
   const sliderRef = useRef(null);

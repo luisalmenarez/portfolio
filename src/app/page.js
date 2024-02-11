@@ -8,9 +8,13 @@ import SlidingImages from "@/components/SlidingImages";
 import Contact from "@/components/Contact";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const useRouter = dynamic(() => import("next/router"), { ssr: false });
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const initLocomotiveScroll = async () => {
@@ -31,7 +35,7 @@ export default function Home() {
           setIsLoading(false);
           document.body.style.cursor = "default";
           window.scrollTo(0, 0);
-        }, 2000);
+        }, 1400);
       }
     };
 
@@ -41,9 +45,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
+        {isLoading && router.pathname !== "/" && <Preloader />}
       </AnimatePresence>
-      <Landing isLoading={isLoading} />
+      <Landing />
       <Description />
       <Projects />
       <SlidingImages />

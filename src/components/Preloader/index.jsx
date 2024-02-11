@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 
 const words = [
   "Luis Almenarez",
-  "Analyst",
-  "Desarrollador",
   "Software",
   "Engineer",
-  "Frontend",
+  "Analista",
   "Developer",
+  "Desarrollador",
 ];
 
 export default function Preloader() {

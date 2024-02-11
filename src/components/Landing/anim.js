@@ -43,7 +43,7 @@ export const opacity = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 2,
+      delay: 1.4,
       duration: 1.5,
       ease: [0.76, 0, 0.24, 1],
     },
