@@ -39,8 +39,8 @@ export default function Index() {
               <Image
                 loading="lazy"
                 fill={true}
-                alt={"image"}
-                src={`/images/bg.jpg`}
+                alt={"Image Contact"}
+                src={`/images/HeroImage.jpg`}
               />
             </div>
             <h2>Trabajemos</h2>
