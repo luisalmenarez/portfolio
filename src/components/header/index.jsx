@@ -18,6 +18,8 @@ export default function Home() {
   const button = useRef(null);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
+  const isWorkRoute = pathname === "/work";
+
   useEffect(() => {
     if (isActive) setIsActive(false);
     setKey((prevKey) => prevKey + 1);
@@ -60,7 +62,11 @@ export default function Home() {
 
   return (
     <>
-      <header ref={header} className={styles.header}>
+      <header
+        ref={header}
+        className={
+          isWorkRoute ? `${styles.header} ${styles.colorBlack}` : styles.header
+        }>
         <Magnetic>
           <Link href="/">
             <article className={styles.logo}>

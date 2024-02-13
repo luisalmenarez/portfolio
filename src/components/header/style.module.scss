@@ -112,6 +112,14 @@
       display: none;
     }
   }
+
+  &.colorBlack {
+    color: #1c1d20;
+
+    .indicator {
+      background-color: #1c1d20 !important;
+    }
+  }
 }
 
 .overlay {

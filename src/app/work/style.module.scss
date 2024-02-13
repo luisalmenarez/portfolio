@@ -1,0 +1,49 @@
+.about {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 10rem;
+    padding: 10rem;
+    h1 {
+      font-size: 5.5vw;
+      font-weight: 450;
+      text-wrap: balance;
+      padding-left: 6rem;
+      letter-spacing: -0.09em;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 6rem;
+    font-size: 1.5rem;
+  }
+}
+
+.projects {
+  padding: 0 10rem;
+
+  .cursor,
+  .cursorLabel {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: #455ce9;
+    color: white;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    pointer-events: none;
+  }
+
+  .cursorLabel {
+    background-color: transparent;
+  }
+}
