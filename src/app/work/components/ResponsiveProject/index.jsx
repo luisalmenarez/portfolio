@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: "Loud Proud",
-    src: "/images/LoudProud.png",
+    src: "/images/loudProud.png",
     color: "#534660",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     title: "Hero Portfolio",
-    src: "/images/HeroPortfolio.png",
+    src: "/images/heroPortfolio.png",
     color: "#626e6e",
   },
 ];
