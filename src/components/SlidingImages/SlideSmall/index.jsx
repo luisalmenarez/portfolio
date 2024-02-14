@@ -15,7 +15,7 @@ export default function Index() {
     },
   });
 
-  const height = useTransform(scrollYProgress, [0, 1], [50, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [15, 0]);
 
   return (
     <>
