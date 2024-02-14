@@ -68,7 +68,7 @@ export default function Landing() {
 
   return (
     <section className={styles.landing}>
-      <Image fill={true} src="/images/HeroImage.jpg" alt="Hero Image" />
+      <Image fill={true} src="/images/background.jpg" alt="Hero Image" />
       <div className={styles.shadow} />
       <motion.div {...anim(opacity)} className={styles.sliderContainer}>
         <div ref={sliderRef} className={styles.slider}>

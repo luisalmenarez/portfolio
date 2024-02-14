@@ -13,7 +13,7 @@
 
   .shadow {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     left: 0;
     top: 0;
     width: 100%;
@@ -27,7 +27,7 @@
       top: calc(100vh - 42rem);
     }
     @media (max-width: 480px) {
-      top: calc(100vh - 55rem);
+      top: calc(100vh - 40rem);
     }
   }
 
