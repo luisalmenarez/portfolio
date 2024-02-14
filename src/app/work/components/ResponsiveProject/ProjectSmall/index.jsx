@@ -3,9 +3,13 @@ import React from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
 
-export default function index({ index, title, manageModal, image }) {
+export default function index({ index, title, manageModal, image, color }) {
   const originalWidth = 960;
   const originalHeight = 540;
+
+  const containerStyle = {
+    backgroundColor: color,
+  };
 
   return (
     <section className={styles.containerSmallProject}>
@@ -16,7 +20,8 @@ export default function index({ index, title, manageModal, image }) {
         onMouseLeave={(e) => {
           manageModal(false, index, e.clientX, e.clientY);
         }}
-        className={styles.projectSmall}>
+        className={styles.projectSmall}
+        style={containerStyle}>
         <Image
           src={image}
           alt="Image Project Shop Tech"

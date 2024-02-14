@@ -6,12 +6,42 @@ const projects = [
   {
     title: "Shop Tech",
     src: "/images/projects/shopTech.png",
-    color: "#000000",
+    color: "#060606",
   },
   {
     title: "Pfmanfit",
     src: "/images/projects/pfmanfit.png",
-    color: "#8C8C8C",
+    color: "#48494b",
+  },
+  {
+    title: "Gallery",
+    src: "/images/projects/gallery.png",
+    color: "#d8d3cd",
+  },
+  {
+    title: "Burger Web",
+    src: "/images/works/burgerWeb.png",
+    color: "#e49c4a",
+  },
+  {
+    title: "Loud Proud",
+    src: "/images/LoudProud.png",
+    color: "#534660",
+  },
+  {
+    title: "Shopping Store",
+    src: "/images/projects/shopping.png",
+    color: "#3f4e46",
+  },
+  {
+    title: "Task App",
+    src: "/images/taskApp.png",
+    color: "#e9eaec",
+  },
+  {
+    title: "Hero Portfolio",
+    src: "/images/HeroPortfolio.png",
+    color: "#626e6e",
   },
 ];
 
@@ -25,6 +55,7 @@ const ResponsiveProjects = ({ manageModal }) => {
               image={project.src}
               index={index}
               title={project.title}
+              color={project.color}
               manageModal={manageModal}
               key={index}
             />

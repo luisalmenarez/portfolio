@@ -1,9 +1,12 @@
 .bodySmall {
-  padding: 0 2rem 0 2rem;
-  display: flex;
-  gap: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
   margin-bottom: 5rem;
-  @media (max-width: 640px) {
+  @media (max-width: 620px) {
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
     width: 100%;
     margin-top: 5rem;

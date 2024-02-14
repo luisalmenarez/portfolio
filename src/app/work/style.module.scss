@@ -11,6 +11,9 @@
       text-wrap: balance;
       padding-left: 6rem;
       letter-spacing: -0.09em;
+      @media (max-width: 768px) {
+        padding: 0;
+      }
     }
   }
 
@@ -20,11 +23,21 @@
     gap: 2rem;
     padding-left: 6rem;
     font-size: 1.5rem;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
 .projects {
   padding: 0 10rem;
+  @media (max-width: 1024px) {
+    padding: 0 6rem;
+  }
+
+  @media (max-width: 840px) {
+    padding: 0 3rem;
+  }
 
   .cursor,
   .cursorLabel {
