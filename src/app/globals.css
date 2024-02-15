@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1 rem = 16px */
   height: 100%;
+  scrollbar-width: none;
 }
 
 *,

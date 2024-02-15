@@ -1,10 +1,15 @@
 .about {
+  overflow: hidden !important;
   .content {
     display: flex;
     flex-direction: column;
     gap: 5rem;
     margin-top: 10rem;
     padding: 10rem;
+
+    @media (max-width: 600px) {
+      padding: 5rem;
+    }
     h1 {
       font-size: 5.5vw;
       font-weight: 450;
@@ -13,6 +18,9 @@
       letter-spacing: -0.09em;
       @media (max-width: 768px) {
         padding: 0;
+      }
+      @media (max-width: 600px) {
+        font-size: 4rem;
       }
     }
   }
@@ -58,5 +66,39 @@
 
   .cursorLabel {
     background-color: transparent;
+  }
+}
+
+.box {
+  display: block;
+  height: 20rem;
+  position: relative;
+  background-color: #ffff;
+  z-index: 1;
+  @media (max-width: 480px) {
+    height: 20rem;
+  }
+}
+
+.circleContainer {
+  position: relative;
+
+  .circle {
+    height: 1550%;
+    width: 100%;
+    left: 0%;
+    border-radius: 0 0 45% 45%;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    box-shadow: 0px 6rem 5rem rgba(0, 0, 0, 0.748);
+
+    @media (max-width: 768px) {
+      height: 900%;
+    }
+
+    @media (max-width: 540px) {
+      height: 1000%;
+    }
   }
 }

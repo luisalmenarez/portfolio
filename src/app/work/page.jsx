@@ -4,10 +4,13 @@ import { useState, useEffect, useRef } from "react";
 import LoaderPage from "@/components/LoaderPage";
 import { AnimatePresence } from "framer-motion";
 import Rounded from "@/common/RoundedButton";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { opacity, slide } from "./anim";
 import ResponsiveProjects from "./components/ResponsiveProject";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import { useMediaQuery } from "react-responsive";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -26,6 +29,7 @@ const scaleAnimation = {
 };
 
 const Work = () => {
+  const isMobile = useMediaQuery({ maxWidth: 520 });
   const [modal, setModal] = useState({ active: false, index: 0 });
   const { active, index } = modal;
   const modalContainer = useRef(null);
@@ -39,6 +43,40 @@ const Work = () => {
   let yMoveCursor = useRef(null);
   let xMoveCursorLabel = useRef(null);
   let yMoveCursorLabel = useRef(null);
+
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+    touch: {
+      enabled: true,
+      sensitivity: 0.5,
+      touchMultiplier: 2,
+    },
+  });
+
+  const height = useTransform(scrollYProgress, [0, 1], [15, 0]);
+
+  useEffect(() => {
+    const initLocomotiveScroll = async () => {
+      if (typeof window !== "undefined") {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
+        const locomotiveScroll = new LocomotiveScroll({
+          el: document.querySelector(".main"),
+          smooth: true,
+          smoothMobile: false,
+          touch: {
+            enabled: true,
+            sensitivity: 1.5,
+            touchMultiplier: 5,
+          },
+        });
+      }
+    };
+
+    initLocomotiveScroll();
+  }, []);
 
   useEffect(() => {
     const initAnimations = () => {
@@ -154,6 +192,11 @@ const Work = () => {
           View
         </motion.section>
       </motion.section>
+      <section ref={container} className={styles.box}></section>
+      <motion.div style={{ height }} className={styles.circleContainer}>
+        <div className={styles.circle}></div>
+      </motion.div>
+      {isMobile ? <Footer /> : <Contact />}
     </>
   );
 };
