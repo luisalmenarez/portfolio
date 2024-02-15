@@ -1,0 +1,220 @@
+.contact {
+  display: grid;
+  place-items: center;
+  color: #ffff;
+  background-color: #141516;
+  margin-top: 2rem;
+  .body {
+    padding-top: 25rem;
+    width: 100%;
+    max-width: 160rem;
+    background-color: #141516;
+
+    @media (max-width: 768px) {
+      padding-top: 20rem;
+    }
+    @media (max-width: 640px) {
+      padding-top: 5rem;
+    }
+
+    .title {
+      border-bottom: 1px solid rgb(134, 134, 134);
+      padding-bottom: 10rem;
+      margin: 0 20rem 0 20rem;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        margin: 0 10rem 0 10rem;
+      }
+      @media (max-width: 480px) {
+        margin: 0 4rem 0 4rem;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+
+        .imageContainer {
+          width: 10rem;
+          height: 10rem;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          @media (max-width: 768px) {
+            width: 5rem;
+            height: 5rem;
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        h2 {
+          margin-left: 1rem;
+        }
+      }
+
+      h2 {
+        font-size: 5vw;
+        margin: 0;
+        font-weight: 500;
+
+        @media (max-width: 640px) {
+          font-size: 4rem;
+        }
+      }
+
+      .buttonContainer {
+        position: absolute;
+        left: calc(100% - 35rem);
+        top: calc(100% - 8.5rem);
+
+        @media (max-width: 768px) {
+          left: calc(100% - 30rem);
+          top: calc(100% - 6.5rem);
+        }
+        @media (max-width: 640px) {
+          left: calc(100% - 14rem);
+        }
+      }
+
+      .button {
+        display: grid;
+        place-items: center;
+        width: 17rem;
+        height: 17rem;
+        background-color: #455ce9;
+        color: white;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          width: 13rem;
+          height: 13rem;
+        }
+
+        p {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 500;
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      margin: 8rem 20rem 0 20rem;
+      font-size: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @media (max-width: 1024px) {
+        margin: 10rem 10rem 0 10rem;
+      }
+      @media (max-width: 768px) {
+        margin: 10rem 10rem 0 8rem;
+        font-size: 1rem;
+      }
+      @media (max-width: 640px) {
+        flex-direction: column;
+        font-size: 1.3rem;
+      }
+      @media (max-width: 480px) {
+        margin: 10rem 3rem 0 3rem;
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding: 2rem;
+
+      @media (max-width: 640px) {
+        flex-direction: column;
+      }
+
+      div {
+        font-weight: 500;
+        font-size: 1.5rem;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+
+        &:nth-child(1) {
+          padding-bottom: 2rem;
+          border-bottom: 1px solid rgb(134, 134, 134);
+        }
+
+        &:nth-child(2) {
+          justify-content: space-between;
+          padding: 3rem;
+        }
+
+        p {
+          &::after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+
+        h3 {
+          color: grey;
+          cursor: default;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

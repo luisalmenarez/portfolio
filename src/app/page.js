@@ -9,10 +9,14 @@ import Contact from "@/components/Contact";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
+import Footer from "@/components/Footer";
+import { useMediaQuery } from "react-responsive";
 
 const useRouter = dynamic(() => import("next/router"), { ssr: false });
 
 export default function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 520 });
+
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
@@ -51,7 +55,7 @@ export default function Home() {
       <Description />
       <Projects />
       <SlidingImages />
-      <Contact />
+      {isMobile ? <Footer /> : <Contact />}
     </main>
   );
 }
