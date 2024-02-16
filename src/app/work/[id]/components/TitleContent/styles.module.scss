@@ -1,0 +1,54 @@
+.titleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 10rem;
+  padding: 8rem 0 0 0;
+
+  @media (max-width: 600px) {
+    padding: 5rem;
+  }
+  h1 {
+    font-size: 7vw;
+    font-weight: 500;
+    text-wrap: balance;
+    padding-left: 20rem;
+    letter-spacing: -0.09em;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+    @media (max-width: 600px) {
+      font-size: 4rem;
+    }
+  }
+
+  .details {
+    width: 100%;
+    display: flex;
+    padding: 2rem 0 2rem 20rem;
+
+    .details__section {
+      width: 100%;
+      margin-right: 10rem;
+    }
+
+    .strip {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #dcdcdc;
+      margin: 1.75em 0 1.5em 0;
+    }
+
+    .role {
+      color: #455ce9;
+      font-size: 1.5rem;
+    }
+
+    .role__detail {
+      list-style-type: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+}
