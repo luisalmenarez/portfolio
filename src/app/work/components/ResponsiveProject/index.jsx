@@ -1,6 +1,7 @@
 "use client";
 import styles from "./style.module.scss";
 import ProjectSmall from "./ProjectSmall";
+import Link from "next/link";
 
 const projects = [
   {
@@ -50,15 +51,17 @@ const ResponsiveProjects = ({ manageModal }) => {
     <>
       <section className={styles.bodySmall}>
         {projects.map((project, index) => {
+          const projectSlug = project.title.toLowerCase().replace(/\s+/g, "-");
           return (
-            <ProjectSmall
-              image={project.src}
-              index={index}
-              title={project.title}
-              color={project.color}
-              manageModal={manageModal}
-              key={index}
-            />
+            <Link key={index} href={`/work/${projectSlug}`}>
+              <ProjectSmall
+                image={project.src}
+                index={index}
+                title={project.title}
+                color={project.color}
+                manageModal={manageModal}
+              />
+            </Link>
           );
         })}
       </section>
