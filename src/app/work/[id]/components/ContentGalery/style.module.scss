@@ -1,48 +1,57 @@
-.container {
-  display: flex;
+.containerGallery {
+  display: grid;
+  place-items: center;
   width: 100%;
+  max-width: 120rem;
   height: 100%;
-  padding: 0 8rem 0 8rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
 
-  img {
-    object-fit: cover;
-    border-radius: 2rem;
-  }
-
-  .buttonContainer {
-    position: absolute;
-    left: calc(100% - 35rem);
-    top: calc(100% - 15rem);
-
-    @media (max-width: 768px) {
-      left: calc(100% - 30rem);
-      top: calc(100% - 6.5rem);
-    }
-    @media (max-width: 640px) {
-      left: calc(100% - 25rem);
-    }
-  }
-  .button {
-    display: grid;
-    place-items: center;
-    width: 15rem;
-    height: 15rem;
-    background-color: #455ce9;
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    cursor: pointer;
-    @media (max-width: 768px) {
-      width: 13rem;
-      height: 13rem;
+  .content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    img {
+      object-fit: cover;
+      border-radius: 2rem;
     }
 
-    p {
-      font-size: 1.5rem;
-      font-weight: bold;
-      z-index: 1;
-      position: relative;
+    .buttonContainer {
+      position: absolute;
+      left: 75%;
+      top: -3%;
+
+      @media (max-width: 768px) {
+        left: calc(100% - 30rem);
+        top: calc(100% - 6.5rem);
+      }
+      @media (max-width: 640px) {
+        left: calc(100% - 25rem);
+      }
+    }
+    .button {
+      display: grid;
+      place-items: center;
+      width: 15rem;
+      height: 15rem;
+      background-color: #455ce9;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        width: 13rem;
+        height: 13rem;
+      }
+
+      p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        z-index: 2;
+        position: relative;
+      }
     }
   }
 }

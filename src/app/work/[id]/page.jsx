@@ -1,15 +1,19 @@
 "use client";
+import styles from "./style.module.scss";
 import LoaderPage from "@/components/LoaderPage";
 import { AnimatePresence } from "framer-motion";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { projects } from "@/app/assets/data";
-import { opacity, slide } from "./components/TitleContent/anim";
-import { motion } from "framer-motion";
 import TitleContent from "./components/TitleContent";
 import ContentGalery from "./components/ContentGalery";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import CurveFooter from "@/components/CurveFooter";
+import { useMediaQuery } from "react-responsive";
 
 const ItemProject = () => {
+  const isMobile = useMediaQuery({ maxWidth: 520 });
   const pathname = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const title = pathname.id;
@@ -37,25 +41,18 @@ const ItemProject = () => {
     fetchData();
   }, []);
 
-  const anim = (variants) => {
-    return {
-      initial: "initial",
-
-      animate: "enter",
-
-      exit: "exit",
-
-      variants,
-    };
-  };
-
   return (
     <>
-      <AnimatePresence>
-        {isLoading && <LoaderPage pageName={nameProject} />}
-      </AnimatePresence>
-      <TitleContent />
-      <ContentGalery />
+      <main className={styles.main}>
+        <AnimatePresence>
+          {isLoading && <LoaderPage pageName={nameProject} />}
+        </AnimatePresence>
+        <TitleContent />
+        <ContentGalery />
+      </main>
+      <CurveFooter />
+
+      {isMobile ? <Footer /> : <Contact />}
     </>
   );
 };

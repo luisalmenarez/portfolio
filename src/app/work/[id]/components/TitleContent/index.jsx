@@ -54,6 +54,9 @@ const TitleContent = () => {
           </li>
         </div>
       </motion.article>
+      <motion.div {...anim(slide)} className={styles.description}>
+        <p> {project.description} </p>
+      </motion.div>
     </section>
   );
 };

@@ -2,6 +2,31 @@ export const projects = [
   {
     title: "Shop Tech",
     src: "/images/projects/shopTech.png",
+    url: "https://futuretechhub.netlify.app/",
+    srcPrev: [
+      {
+        path: "/images/works/shopTech/shopTech1.jpg",
+        alt: "Imagen 1 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech2.jpg",
+        alt: "Imagen 2 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech3.jpg",
+        alt: "Imagen 3 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech4.jpg",
+        alt: "Imagen 4 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech5.jpg",
+        alt: "Imagen 5 de Shop Tech",
+      },
+    ],
+    description:
+      "Shop Tech es una tienda de tecnología innovadora y elegante, creada con HTML, SCSS y JavaScript puro. Se implementó la metodología BEM para garantizar un código modular y escalable. Destaca por su diseño impecable, su funcionalidad excepcional y su práctico carrito de compras integrado.",
     color: "#060606",
     technologies: ["HTML", "SCSS", "JavaScript"],
     role: "Diseño & Desarollo",
@@ -11,6 +36,25 @@ export const projects = [
   {
     title: "Pfmanfit",
     src: "/images/projects/pfmanfit.png",
+    url: "https://pfmanfit.vercel.app/",
+    srcPrev: [
+      {
+        path: "/images/works/shopTech/shopTech1.jpg",
+        alt: "Imagen 1 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech2.jpg",
+        alt: "Imagen 2 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech3.jpg",
+        alt: "Imagen 3 de Shop Tech",
+      },
+      {
+        path: "/images/works/shopTech/shopTech4.jpg",
+        alt: "Imagen 4 de Shop Tech",
+      },
+    ],
     color: "#48494b",
     technologies: ["TypeScript", "ReactJS", "TailwindCSS", "Framer Motion"],
     role: "Desarrollo Frontend & Backend",

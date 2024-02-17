@@ -1,17 +1,14 @@
 .titleContent {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: grid;
+  align-items: start;
+  max-width: 140rem;
   gap: 5rem;
-  margin-top: 10rem;
-  padding: 8rem 0 0 0;
+  margin-top: 12rem;
 
-  @media (max-width: 600px) {
-    padding: 5rem;
-  }
   h1 {
-    font-size: 7vw;
+    font-size: 10rem;
     font-weight: 500;
-    text-wrap: balance;
     padding-left: 20rem;
     letter-spacing: -0.09em;
     @media (max-width: 768px) {
@@ -23,10 +20,9 @@
   }
 
   .details {
-    width: 100%;
     display: flex;
-    padding: 2rem 0 2rem 20rem;
-
+    width: 100%;
+    padding-left: 20rem;
     .details__section {
       width: 100%;
       margin-right: 10rem;
@@ -50,5 +46,11 @@
       font-size: 1.5rem;
       font-weight: 500;
     }
+  }
+
+  .description {
+    padding: 0 20rem;
+    font-size: 1.7rem;
+    font-weight: 400;
   }
 }
