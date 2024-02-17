@@ -36,6 +36,7 @@ const TitleContent = () => {
           <li className={styles.role__detail}>
             <p>{project.role}</p>
           </li>
+          <div className={styles.stripMobile}></div>
         </div>
         <div className={styles.details__section}>
           <h2 className={styles.role}>Tecnologías</h2>
@@ -43,6 +44,7 @@ const TitleContent = () => {
           <li className={styles.role__detail}>
             <p>{project.technologies.join(", ")}</p>
           </li>
+          <div className={styles.stripMobile}></div>
         </div>
         <div className={styles.details__section}>
           <h2 className={styles.role}>Location & year</h2>
@@ -52,6 +54,7 @@ const TitleContent = () => {
               {project.location} © {project.year}
             </p>
           </li>
+          <div className={styles.stripMobile}></div>
         </div>
       </motion.article>
       <motion.div {...anim(slide)} className={styles.description}>

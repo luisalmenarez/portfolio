@@ -5,6 +5,15 @@
   max-width: 120rem;
   height: 100%;
   margin-top: 5rem;
+  @media (max-width: 1200px) {
+    padding: 0 10rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0 5rem;
+  }
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+  }
 
   .content {
     width: 100%;
@@ -14,20 +23,25 @@
     gap: 5rem;
     img {
       object-fit: cover;
-      border-radius: 2rem;
     }
 
     .buttonContainer {
       position: absolute;
       left: 75%;
       top: -3%;
-
       @media (max-width: 768px) {
-        left: calc(100% - 30rem);
-        top: calc(100% - 6.5rem);
+        top: -18%;
       }
-      @media (max-width: 640px) {
-        left: calc(100% - 25rem);
+      @media (max-width: 600px) {
+        left: 70%;
+        top: -25%;
+      }
+      @media (max-width: 480px) {
+        top: -35%;
+      }
+      @media (max-width: 400px) {
+        left: 65%;
+        top: -40%;
       }
     }
     .button {

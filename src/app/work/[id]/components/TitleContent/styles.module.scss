@@ -11,11 +11,21 @@
     font-weight: 500;
     padding-left: 20rem;
     letter-spacing: -0.09em;
+    @media (max-width: 1024px) {
+      font-size: 7rem;
+      padding-left: 10rem;
+    }
     @media (max-width: 768px) {
-      padding: 0;
+      padding-left: 10rem;
     }
     @media (max-width: 600px) {
       font-size: 4rem;
+    }
+    @media (max-width: 480px) {
+      padding-left: 5rem;
+    }
+    @media (max-width: 400px) {
+      padding-left: 1.5rem;
     }
   }
 
@@ -23,28 +33,52 @@
     display: flex;
     width: 100%;
     padding-left: 20rem;
+    @media (max-width: 1024px) {
+      padding-left: 10rem;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 0 10rem;
+    }
+    @media (max-width: 480px) {
+      padding-left: 5rem;
+    }
+    @media (max-width: 400px) {
+      padding-left: 1.5rem;
+    }
     .details__section {
       width: 100%;
       margin-right: 10rem;
-    }
+      .strip,
+      .stripMobile {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #dcdcdc;
+        margin: 1.75em 0 1.5em 0;
+      }
 
-    .strip {
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: #dcdcdc;
-      margin: 1.75em 0 1.5em 0;
-    }
+      .strip {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
 
-    .role {
-      color: #455ce9;
-      font-size: 1.5rem;
-    }
+      .stripMobile {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
 
-    .role__detail {
-      list-style-type: none;
-      font-size: 1.5rem;
-      font-weight: 500;
+      .role {
+        color: #455ce9;
+        font-size: 1.5rem;
+      }
+      .role__detail {
+        list-style-type: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
     }
   }
 
@@ -52,5 +86,18 @@
     padding: 0 20rem;
     font-size: 1.7rem;
     font-weight: 400;
+    @media (max-width: 1024px) {
+      padding-left: 10rem;
+    }
+    @media (max-width: 768px) {
+      padding-right: 5rem;
+      font-size: 1.5rem;
+    }
+    @media (max-width: 480px) {
+      padding-left: 5rem;
+    }
+    @media (max-width: 400px) {
+      padding-left: 1.5rem;
+    }
   }
 }
