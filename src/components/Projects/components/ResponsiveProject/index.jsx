@@ -12,11 +12,13 @@ const projects = [
     title: "Shop Tech",
     src: "/images/projects/shopTech.png",
     color: "#000000",
+    url: "/work/shop-tech",
   },
   {
     title: "Pfmanfit",
     src: "/images/projects/pfmanfit.png",
     color: "#8C8C8C",
+    url: "/work/pfmanfit",
   },
 ];
 
@@ -93,13 +95,14 @@ const ResponsiveProjects = ({ manageModal, modal }) => {
       <section className={styles.bodySmall}>
         {projects.map((project, index) => {
           return (
-            <ProjectSmall
-              image={project.src}
-              index={index}
-              title={project.title}
-              manageModal={manageModal}
-              key={index}
-            />
+            <Link href={project.url} key={index}>
+              <ProjectSmall
+                image={project.src}
+                index={index}
+                title={project.title}
+                manageModal={manageModal}
+              />
+            </Link>
           );
         })}
       </section>
