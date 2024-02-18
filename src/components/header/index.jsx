@@ -106,8 +106,16 @@ export default function Home() {
             <p
               onClick={() => {
                 setIsActive(!isActive);
+                const headerButtonContainer = document.querySelector(
+                  `.${styles.headerButtonContainer}`
+                );
+                if (headerButtonContainer) {
+                  headerButtonContainer.style.transform = isActive
+                    ? "scale(0)"
+                    : "scale(1)";
+                }
               }}>
-              Menu
+              Menú
             </p>
           </div>
         </Magnetic>
