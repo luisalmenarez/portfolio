@@ -75,9 +75,27 @@
         font-size: 1.5rem;
       }
       .role__detail {
+        display: flex;
         list-style-type: none;
         font-size: 1.5rem;
         font-weight: 500;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          border: 1px solid gray;
+          padding: 0.5rem 5rem;
+          border-radius: 0 1rem 0 1rem;
+          transition: all 500ms;
+          @media (max-width: 768px) {
+            margin-top: 1rem;
+          }
+
+          &:hover {
+            color: #f8f9ff;
+            background-color: #455ce9;
+          }
+        }
       }
     }
   }

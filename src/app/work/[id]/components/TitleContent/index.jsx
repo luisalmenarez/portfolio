@@ -3,6 +3,8 @@ import { projects } from "@/app/assets/data";
 import { useParams } from "next/navigation";
 import { opacity, slide } from "./anim";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Magnetic from "@/common/Magnetic";
 
 const TitleContent = () => {
   const pathname = useParams();
@@ -47,13 +49,15 @@ const TitleContent = () => {
           <div className={styles.stripMobile}></div>
         </div>
         <div className={styles.details__section}>
-          <h2 className={styles.role}>Location & year</h2>
+          <h2 className={styles.role}>Código fuente</h2>
           <div className={styles.strip}></div>
-          <li className={styles.role__detail}>
-            <p>
-              {project.location} © {project.year}
-            </p>
-          </li>
+          <Magnetic>
+            <li className={styles.role__detail}>
+              <Link href={project.githubLink} target="_blank">
+                Github
+              </Link>
+            </li>
+          </Magnetic>
           <div className={styles.stripMobile}></div>
         </div>
       </motion.article>
