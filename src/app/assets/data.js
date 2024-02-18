@@ -185,6 +185,10 @@ export const projects = [
         path: "/images/works/shoppingStore/shoppingStore4.jpg",
         alt: "Imagen 4 Shopping Store",
       },
+      {
+        path: "/images/works/shoppingStore/shoppingStore5.jpg",
+        alt: "Imagen 5 Shopping Store",
+      },
     ],
     description:
       "Esta es una aplicación de tienda de ropa desarrollada con React para la lógica de la aplicación y Tailwind CSS para los estilos, lo que garantiza una interfaz atractiva y altamente responsive. Utiliza una base de datos de Firebase para almacenar y gestionar los datos de la aplicación, y se integra SweetAlert2 para mejorar la experiencia del usuario con confirmaciones y mensajes interactivos.",
@@ -210,6 +214,10 @@ export const projects = [
         path: "/images/works/taskApp/taskApp3.jpg",
         alt: "Imagen 3 TaskApp",
       },
+      {
+        path: "/images/works/taskApp/taskApp4.jpg",
+        alt: "Imagen 4 TaskApp",
+      },
     ],
     description:
       "TaskApp es una aplicación de gestión de tareas construida con React, donde puedes crear, marcar como completadas y eliminar tareas. Destaca por su interfaz amigable, diseñada de manera intuitiva para proporcionar una experiencia de usuario fluida. Utiliza tecnologías modernas como React para un desarrollo eficiente.",
@@ -219,7 +227,7 @@ export const projects = [
     githubLink: "https://github.com/luisalmenarez/taskapp",
   },
   {
-    title: "Gourmet Burger Hub",
+    title: "Gourmet Hub",
     src: "/images/gourmetBurger1.jpg",
     url: "https://gourmetburgerhub.netlify.app",
     srcPrev: [
@@ -238,6 +246,10 @@ export const projects = [
       {
         path: "/images/works/gourmetBurger/gourmetBurger4.jpg",
         alt: "Imagen 4 Gourmet Burger Hub",
+      },
+      {
+        path: "/images/works/gourmetBurger/gourmetBurger5.jpg",
+        alt: "Imagen 5 Gourmet Burger Hub",
       },
     ],
     description:
