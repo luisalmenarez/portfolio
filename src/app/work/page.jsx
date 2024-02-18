@@ -11,6 +11,7 @@ import ResponsiveProjects from "./components/ResponsiveProject";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -157,15 +158,25 @@ const Work = () => {
         <div className={styles.content}>
           <h1>Creando aplicaciones web con el más alto nivel</h1>
           <article className={styles.buttons}>
-            <Rounded backgroundColor={"#1c1d20"}>
-              <p>All</p>
-            </Rounded>
-            <Rounded>
-              <p>Frontend</p>
-            </Rounded>
-            <Rounded>
-              <p>Backend</p>
-            </Rounded>
+            <Link href={"https://github.com/luisalmenarez"} target="_blank">
+              <Rounded>
+                <p>Github</p>
+              </Rounded>
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/luisalmenarez/"}
+              target="_blank">
+              <Rounded>
+                <p>LinkedIn</p>
+              </Rounded>
+            </Link>
+            <Link
+              href={"https://www.instagram.com/_luisalmenarez/"}
+              target="_blank">
+              <Rounded>
+                <p>Instagram</p>
+              </Rounded>
+            </Link>
           </article>
         </div>
       </motion.section>
