@@ -15,21 +15,25 @@ const projects = [
     title: "Shop Tech",
     src: "projects/shopTech.png",
     color: "#000000",
+    url: "/work/shop-tech",
   },
   {
     title: "Pfmanfit",
     src: "projects/pfmanfit.png",
     color: "#8C8C8C",
+    url: "/work/pfmanfit",
   },
   {
     title: "React Ecommerce",
     src: "projects/shopping.png",
     color: "#d7d7d7",
+    url: "/work/shopping-store",
   },
   {
     title: "Gallery",
     src: "projects/gallery.png",
     color: "#706D63",
+    url: "/work/gallery",
   },
 ];
 
@@ -126,12 +130,13 @@ export default function Projects() {
       ) : (
         <section className={styles.body}>
           {projects.map((project, index) => (
-            <Project
-              index={index}
-              title={project.title}
-              manageModal={manageModal}
-              key={index}
-            />
+            <Link href={project.url} key={index}>
+              <Project
+                index={index}
+                title={project.title}
+                manageModal={manageModal}
+              />
+            </Link>
           ))}
         </section>
       )}
