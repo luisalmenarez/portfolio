@@ -40,8 +40,8 @@ export default function Home() {
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
+        start: "top 50%",
+        end: "bottom 50%",
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
@@ -110,6 +110,8 @@ export default function Home() {
                   `.${styles.headerButtonContainer}`
                 );
                 if (headerButtonContainer) {
+                  headerButtonContainer.style.transition =
+                    "transform 500ms ease";
                   headerButtonContainer.style.transform = isActive
                     ? "scale(0)"
                     : "scale(1)";
