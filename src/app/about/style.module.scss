@@ -1,8 +1,53 @@
 .about {
-  height: 100vh;
-  background-color: #333;
+  display: grid;
+  padding-bottom: 30rem;
 
-  .content {
-    display: flex;
+  .descriptionContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+
+    .descriptionText {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      font-size: 1.8rem;
+      font-weight: 450;
+      line-height: 1.6;
+      padding: 0 8rem 0 10rem;
+
+      .descriptionPhrase {
+        color: gray;
+      }
+    }
+
+    .gridImage {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 135%;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .overlay:nth-child(1) {
+        background: url("../../../public//images/ImageAbout.jpg") center center
+          no-repeat;
+        background-size: cover;
+        top: -15vh;
+        height: 110%;
+      }
+    }
   }
 }

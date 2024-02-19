@@ -1,0 +1,60 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding: 8rem 10rem;
+  @media (max-width: 600px) {
+    padding: 5rem 2rem;
+  }
+
+  h2 {
+    font-size: 5.5vw;
+    font-weight: 450;
+    text-wrap: balance;
+    padding-left: 8rem;
+    letter-spacing: -0.09em;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+    @media (max-width: 600px) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.strip {
+  position: relative;
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding-bottom: 8rem;
+  margin: 0 10rem 0 10rem;
+
+  .buttonContainer {
+    position: absolute;
+    left: 70%;
+
+    .button {
+      display: grid;
+      place-items: center;
+      width: 16rem;
+      height: 16rem;
+      background-color: #455ce9;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        width: 13rem;
+        height: 13rem;
+      }
+
+      p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        z-index: 2;
+        position: relative;
+      }
+    }
+  }
+}
