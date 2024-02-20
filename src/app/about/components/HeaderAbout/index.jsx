@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import { opacity, slide } from "../../../work/anim";
+import { opacity, slide } from "@/app/assets/anim";
 import Rounded from "@/common/RoundedButton";
 import Link from "next/link";
 import { motion } from "framer-motion";

@@ -1,17 +1,21 @@
 "use client";
 import styles from "./style.module.scss";
 import { useState, useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 import LoaderPage from "@/components/LoaderPage";
-import { AnimatePresence } from "framer-motion";
 import Rounded from "@/common/RoundedButton";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import gsap from "gsap";
-import { opacity, slide } from "./anim";
+import { opacity, slide } from "@/app/assets/anim";
 import ResponsiveProjects from "./components/ResponsiveProject";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { useMediaQuery } from "react-responsive";
-import Link from "next/link";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },

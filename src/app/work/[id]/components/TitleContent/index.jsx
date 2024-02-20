@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { projects } from "@/app/assets/data";
 import { useParams } from "next/navigation";
-import { opacity, slide } from "./anim";
+import { opacity, slide } from "@/app/assets/anim";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "@/common/Magnetic";

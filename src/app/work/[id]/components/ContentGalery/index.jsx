@@ -5,7 +5,7 @@ import Link from "next/link";
 import { projects } from "@/app/assets/data";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { slide } from "./anim";
+import { slide } from "@/app/assets/anim";
 
 const ContentGalery = () => {
   const pathname = useParams();
