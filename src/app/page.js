@@ -25,9 +25,9 @@ export default function Home() {
       if (typeof window !== "undefined") {
         const LocomotiveScroll = (await import("locomotive-scroll")).default;
         const locomotiveScroll = new LocomotiveScroll({
-          el: document.querySelector(".main"),
+          el: document.body,
           smooth: true,
-          smoothMobile: false,
+          smoothMobile: true,
           touch: {
             enabled: true,
             sensitivity: 1.5,
