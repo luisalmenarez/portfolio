@@ -25,34 +25,45 @@ const ItemProject = () => {
   const nameProject = project.title;
 
   useEffect(() => {
-    const fetchData = async () => {
+    document.title = `${nameProject} - Luis Almenarez`;
+    const initLocomotiveScroll = async () => {
       if (typeof window !== "undefined") {
         const LocomotiveScroll = (await import("locomotive-scroll")).default;
-        const locomotiveScroll = new LocomotiveScroll({});
+        const locomotiveScroll = new LocomotiveScroll({
+          el: document.body,
+          smooth: true,
+          smoothMobile: true,
+          inertia: 0.2,
+          touch: {
+            enabled: true,
+            sensitivity: 1.5,
+            touchMultiplier: 5,
+          },
+        });
       }
-
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 700);
     };
 
-    fetchData();
+    initLocomotiveScroll();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 700);
   }, []);
 
   return (
     <>
-      <main className={styles.main}>
+      <main>
         <AnimatePresence>
           {isLoading && <LoaderPage pageName={nameProject} />}
         </AnimatePresence>
         <TitleContent />
         <ContentGalery />
+        {isMobile ? <Footer /> : <Contact />}
       </main>
-      <CurveFooter />
-
-      {isMobile ? <Footer /> : <Contact />}
     </>
   );
 };

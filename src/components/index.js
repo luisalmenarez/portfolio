@@ -1,0 +1,10 @@
+export { default as Contact } from "./Contact";
+export { default as CurveFooter } from "./CurveFooter";
+export { default as Description } from "./Description";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
+export { default as Landing } from "./Landing";
+export { default as LoaderPage } from "./LoaderPage";
+export { default as Preloader } from "./Preloader";
+export { default as Projects } from "./Projects";
+export { default as SlidingImages } from "./SlidingImages";

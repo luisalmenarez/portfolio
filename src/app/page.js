@@ -28,6 +28,7 @@ export default function Home() {
           el: document.body,
           smooth: true,
           smoothMobile: true,
+          inertia: 0.2,
           touch: {
             enabled: true,
             sensitivity: 1.5,

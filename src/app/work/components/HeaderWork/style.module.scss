@@ -1,0 +1,49 @@
+.headerWork {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 10rem;
+    padding: 10rem;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+    h1 {
+      font-size: 5.5vw;
+      font-weight: 450;
+      text-wrap: balance;
+      padding-left: 6rem;
+      letter-spacing: -0.09em;
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+      @media (max-width: 600px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 6rem;
+    font-size: 1.5rem;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+    @media (max-width: 600px) {
+      gap: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      @media (max-width: 600px) {
+        width: 33%;
+      }
+    }
+  }
+}
