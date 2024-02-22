@@ -5,6 +5,9 @@
   max-width: 140rem;
   gap: 5rem;
   margin: 12rem auto;
+  @media (max-width: 768px) {
+    margin: 5rem auto;
+  }
 
   h1 {
     font-size: 10rem;
