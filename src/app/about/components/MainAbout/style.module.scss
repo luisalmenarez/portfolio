@@ -1,64 +1,13 @@
 .mainAbout {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 6rem 10rem;
+  height: 100%;
+
   overflow: hidden;
 
-  .descriptionText {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1.6rem;
-    font-weight: 450;
-    line-height: 1.6;
-    padding: 0rem 10rem;
-    p {
-      text-wrap: balance;
-    }
-    svg {
-      left: 5%;
-      top: -5%;
-      position: absolute;
-    }
-
-    .descriptionPhrase {
-      color: #868686;
-      font-style: italic;
-      text-wrap: balance;
-      font-size: 1.5rem;
-      border-left: 0.3rem solid #868686;
-      padding-left: 1rem;
-      margin-top: 2rem;
-    }
-  }
-
-  .gridImage {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 135%;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    .overlay:nth-child(1) {
-      background: url("../../../../../public//images/ImageAbout.jpg") center
-        bottom no-repeat;
-      background-size: cover;
-      top: -20vh;
-      height: 110%;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr);
+    padding: 6rem 10rem;
   }
 }

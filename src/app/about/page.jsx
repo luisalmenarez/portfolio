@@ -1,7 +1,5 @@
 "use client";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Curve from "@/components/LoaderPage";
+import { Contact, Footer, LoaderPage } from "@/components/index";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -24,7 +22,7 @@ const About = () => {
   return (
     <>
       <AnimatePresence>
-        {isLoading && <Curve pageName="Sobre mí" />}
+        {isLoading && <LoaderPage pageName="Sobre mí" />}
       </AnimatePresence>
       <section className={styles.about}>
         <HeaderAbout />

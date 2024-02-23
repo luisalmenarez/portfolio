@@ -1,0 +1,30 @@
+.descriptionText {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  margin-bottom: 0;
+  position: relative;
+
+  p {
+    text-wrap: balance;
+    line-height: 1.6;
+    font-weight: 450;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  svg {
+    left: 0%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .descriptionPhrase {
+    color: #868686;
+    font-style: italic;
+    text-wrap: balance;
+    font-size: 1.5rem;
+    border-left: 0.3rem solid #868686;
+    padding-left: 1rem;
+    margin-top: 4rem;
+  }
+}
