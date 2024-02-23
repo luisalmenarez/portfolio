@@ -24,7 +24,9 @@ const HeaderAbout = () => {
       </motion.h2>
       <motion.div {...anim(slide)} className={styles.strip}>
         <article className={styles.buttonContainer}>
-          <Link href={"linkedin"}>
+          <Link
+            href={"https://www.linkedin.com/in/luisalmenarez/"}
+            target="_blank">
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
               <p>Contáctame</p>
             </Rounded>

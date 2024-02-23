@@ -5,6 +5,11 @@
   margin-bottom: 0;
   position: relative;
 
+  @media (max-width: 840px) {
+    margin-bottom: 10rem;
+    padding: 0 3rem;
+  }
+
   p {
     text-wrap: balance;
     line-height: 1.6;
@@ -16,6 +21,11 @@
     left: 0%;
     top: 0%;
     position: absolute;
+
+    @media (max-width: 420px) {
+      left: 5%;
+      top: -10%;
+    }
   }
 
   .descriptionPhrase {

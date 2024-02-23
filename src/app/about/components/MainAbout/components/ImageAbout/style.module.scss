@@ -23,7 +23,10 @@
     background: url("../../../../../../../public/images/ImageAbout.jpg") center
       bottom no-repeat;
     background-size: cover;
-    top: -20vh;
+    top: -22vh;
     height: 110%;
+    @media (max-width: 510px) {
+      top: -10vh;
+    }
   }
 }

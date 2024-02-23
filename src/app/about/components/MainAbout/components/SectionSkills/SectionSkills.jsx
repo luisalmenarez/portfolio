@@ -41,11 +41,11 @@ const SectionSkills = () => {
           <h2 className={styles.role}>01</h2>
           <div className={styles.strip}></div>
           <li className={styles.role__detail}>
-            <h4>Design</h4>
+            <h4>Diseño</h4>
             <p>
-              With a solid track record in designing websites and apps, I
-              deliver strong and user-friendly digital designs. Solid company
-              branding is the foundation of any succesful website.
+              Imagina un mundo donde cada línea de código es una obra maestra,
+              donde la elegancia y la eficiencia se fusionan para crear
+              experiencias digitales que desafían los límites de la imaginación.
             </p>
           </li>
           <div className={styles.stripMobile}></div>
@@ -54,11 +54,12 @@ const SectionSkills = () => {
           <h2 className={styles.role}>02</h2>
           <div className={styles.strip}></div>
           <li className={styles.role__detail}>
-            <h4>Development</h4>
+            <h4>Desarrollo</h4>
             <p>
-              I build scalable websites from scratch that fit seamlessly with
-              design. My focus is on micro animations, transitions and
-              interaction. For content management I use Kirby CMS.
+              Construyo sitios web escalables desde cero, que se adaptan
+              perfectamente a cada diseño, me enfoco en la eficiencia y
+              velocidad. Con ayuda de TypeScript, React, NextJS, Tailwind, entre
+              otros. Busco trascender lo ordinario.
             </p>
           </li>
           <div className={styles.stripMobile}></div>
@@ -67,11 +68,12 @@ const SectionSkills = () => {
           <h2 className={styles.role}>03</h2>
           <div className={styles.strip}></div>
           <li className={styles.role__detail}>
-            <h4>The full package</h4>
+            <h4>Análisis</h4>
             <p>
-              A complete website from concept to implementation, that s what
-              makes me stand out. My great sense for design and my development
-              skills enable me to create kick-ass projects.
+              Traduzco ideas abstractas en productos tangibles. Soy más que un
+              desarrollador, soy un arquitecto de soluciones, un visionario que
+              transforma conceptos en realidades, siempre sobrepasando los
+              límites de la creatividad y la innovación.
             </p>
           </li>
           <div className={styles.stripMobile}></div>

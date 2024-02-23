@@ -6,6 +6,9 @@
   @media (max-width: 600px) {
     padding: 5rem 2rem;
   }
+  @media (max-width: 420px) {
+    padding: 5rem 0rem;
+  }
 
   h2 {
     font-size: 5.5vw;
@@ -15,7 +18,7 @@
     letter-spacing: -0.09em;
 
     @media (max-width: 768px) {
-      padding: 0;
+      padding-left: 4rem;
     }
     @media (max-width: 600px) {
       font-size: 4rem;
@@ -32,6 +35,15 @@
   .buttonContainer {
     position: absolute;
     left: 70%;
+
+    @media (max-width: 768px) {
+      top: 20%;
+      left: 65%;
+    }
+    @media (max-width: 420px) {
+      top: 20%;
+      left: 55%;
+    }
 
     .button {
       display: grid;

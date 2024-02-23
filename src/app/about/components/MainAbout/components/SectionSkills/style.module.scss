@@ -4,14 +4,26 @@
   flex-direction: column;
   padding: 0 10rem;
   margin-bottom: 30rem;
+  @media (max-width: 840px) {
+    padding: 0 5rem;
+  }
+
+  @media (max-width: 510px) {
+    padding: 0 2rem;
+  }
 
   .title {
     display: flex;
     align-items: center;
     font-size: 4rem;
 
+    @media (max-width: 510px) {
+      font-size: 3rem;
+    }
+
     h3 {
       font-weight: 500;
+      margin-right: 0.5rem;
     }
 
     span {
@@ -23,9 +35,13 @@
     display: flex;
     width: 100%;
     gap: 10rem;
+    text-wrap: balance;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .details__section {
-      text-wrap: balance;
       .strip,
       .stripMobile {
         display: block;
@@ -50,6 +66,9 @@
       .role {
         color: #838385;
         font-size: 1.5rem;
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
       .role__detail {
         display: flex;
@@ -65,7 +84,7 @@
         }
 
         p {
-          font-weight: 300;
+          font-weight: 400;
         }
 
         a {
