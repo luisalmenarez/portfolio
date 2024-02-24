@@ -1,17 +1,17 @@
 "use client";
-import { Contact, Footer, LoaderPage } from "@/components/index";
+import styles from "./style.module.scss";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import HeaderAbout from "./components/HeaderAbout";
-import MainAbout from "./components/MainAbout";
-import styles from "./style.module.scss";
+import { Contact, Footer, LoaderPage } from "@/components/index";
+import { HeaderAbout, MainAbout, DescriptionAbout } from "./components/";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useMediaQuery({ maxWidth: 520 });
 
   useEffect(() => {
+    document.title = "Sobre mí - Luis Almenarez";
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = "default";
@@ -27,8 +27,9 @@ const About = () => {
       <section className={styles.about}>
         <HeaderAbout />
         <MainAbout />
+        <DescriptionAbout />
       </section>
-      {isMobile ? <Footer /> : <Contact />}
+      {/* {isMobile ? <Footer /> : <Contact />} */}
     </>
   );
 };
