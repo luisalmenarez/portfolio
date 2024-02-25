@@ -7,10 +7,8 @@ import { useEffect, useState } from "react";
 import { projects } from "@/app/assets/data";
 import TitleContent from "./components/TitleContent";
 import ContentGalery from "./components/ContentGalery";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import CurveFooter from "@/components/CurveFooter";
 import { useMediaQuery } from "react-responsive";
+import { Contact, Footer, CurveFooter } from "@/components";
 
 const ItemProject = () => {
   const isMobile = useMediaQuery({ maxWidth: 520 });
@@ -56,12 +54,13 @@ const ItemProject = () => {
 
   return (
     <>
-      <main>
-        <AnimatePresence>
-          {isLoading && <LoaderPage pageName={nameProject} />}
-        </AnimatePresence>
+      <AnimatePresence>
+        {isLoading && <LoaderPage pageName={nameProject} />}
+      </AnimatePresence>
+      <main className={styles.main}>
         <TitleContent />
         <ContentGalery />
+        <CurveFooter />
         {isMobile ? <Footer /> : <Contact />}
       </main>
     </>

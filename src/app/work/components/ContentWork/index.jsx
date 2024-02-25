@@ -1,5 +1,5 @@
 import { slide } from "@/app/assets/anim";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import ResponsiveProjects from "../ResponsiveProject";
@@ -98,21 +98,8 @@ const ContentWork = () => {
     };
   };
 
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-    touch: {
-      enabled: true,
-      sensitivity: 0.5,
-      touchMultiplier: 2,
-    },
-  });
-
-  const height = useTransform(scrollYProgress, [0, 1], [50, 0]);
-
   return (
-    <section ref={container} className={styles.contentWorkContainer}>
+    <section className={styles.contentWorkContainer}>
       <motion.section
         {...anim(slide)}
         onMouseMove={(e) => {
@@ -136,9 +123,6 @@ const ContentWork = () => {
           View
         </motion.section>
       </motion.section>
-      <motion.div style={{ height }} className={styles.circleContainer}>
-        <div className={styles.circle}></div>
-      </motion.div>
     </section>
   );
 };

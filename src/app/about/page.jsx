@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Contact, Footer, LoaderPage } from "@/components/index";
+import { Contact, CurveFooter, Footer, LoaderPage } from "@/components/index";
 import { HeaderAbout, MainAbout, DescriptionAbout } from "./components/";
 
 const About = () => {
@@ -28,8 +28,9 @@ const About = () => {
         <HeaderAbout />
         <MainAbout />
         <DescriptionAbout />
+        <CurveFooter />
+        {isMobile ? <Footer /> : <Contact />}
       </section>
-      {/* {isMobile ? <Footer /> : <Contact />} */}
     </>
   );
 };

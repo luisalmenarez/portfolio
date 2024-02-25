@@ -17,7 +17,7 @@ const CurveFooter = () => {
 
   return (
     <>
-      <section ref={container} className={styles.box}></section>
+      {/* <section ref={container} className={styles.box}></section> */}
       <motion.div style={{ height }} className={styles.circleContainer}>
         <div className={styles.circle}></div>
       </motion.div>

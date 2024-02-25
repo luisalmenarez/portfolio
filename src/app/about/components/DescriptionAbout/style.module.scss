@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 6rem 10rem;
+  position: relative;
+  background-color: white;
+  z-index: 1;
 
   @media (max-width: 840px) {
     grid-template-columns: 1fr;
