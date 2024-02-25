@@ -25,7 +25,7 @@ const Work = () => {
       <AnimatePresence>
         {isLoading && <LoaderPage pageName="Proyectos" />}
       </AnimatePresence>
-      <main className={styles.main}>
+      <main>
         <HeaderWork />
         <ContentWork />
         <CurveFooter />
