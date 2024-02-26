@@ -18,7 +18,7 @@ export default function Home() {
   const button = useRef(null);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
-  const isWorkRoute = pathname !== "/";
+  const isWorkRoute = pathname !== "/" && pathname !== "/contact";
 
   useEffect(() => {
     if (isActive) setIsActive(false);

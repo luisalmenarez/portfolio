@@ -4,11 +4,14 @@ import styles from "./style.module.scss";
 import { useState, useEffect } from "react";
 import LoaderPage from "@/components/LoaderPage";
 import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import TitleContact from "./components/HeaderContact/TitleContact";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Contacto - Luis Almenarez";
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = "default";
@@ -17,14 +20,16 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className={styles.about}>
-      <div className={styles.content}>
-        <h1>CONTACTO</h1>
-        <AnimatePresence>
-          {isLoading && <LoaderPage pageName="Contacto" />}
-        </AnimatePresence>
-      </div>
-    </section>
+    <>
+      <AnimatePresence>
+        {isLoading && <LoaderPage pageName="Contacto" />}
+      </AnimatePresence>
+      <section className={styles.contact}>
+        <div className="w-full py-6 bg-gray-100 dark:bg-[#141516]">
+          <TitleContact />
+        </div>
+      </section>
+    </>
   );
 };
 
