@@ -1,11 +1,10 @@
 "use client";
-
-import styles from "./style.module.scss";
-import { useState, useEffect } from "react";
 import LoaderPage from "@/components/LoaderPage";
 import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import ContentContact from "./components/ContectContact/ContentContact";
 import TitleContact from "./components/HeaderContact/TitleContact";
+import styles from "./style.module.scss";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,8 +24,9 @@ const Contact = () => {
         {isLoading && <LoaderPage pageName="Contacto" />}
       </AnimatePresence>
       <section className={styles.contact}>
-        <div className="w-full py-6 bg-gray-100 dark:bg-[#141516]">
+        <div className="w-full py-6 bg-[#141516]">
           <TitleContact />
+          <ContentContact />
         </div>
       </section>
     </>

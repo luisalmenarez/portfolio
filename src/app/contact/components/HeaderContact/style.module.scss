@@ -1,83 +1,34 @@
 .content {
   display: flex;
-  flex-direction: column;
-  background-color: #141516;
-  margin-top: 10rem;
-  padding: 8rem 8rem;
-  @media (max-width: 600px) {
-    padding: 5rem 2rem;
-  }
-  @media (max-width: 420px) {
-    padding: 5rem 0rem;
-  }
+  align-items: center;
+  margin-top: 15rem;
 
   h2 {
+    display: flex;
+    flex-direction: column;
     font-size: 6vw;
     font-weight: 450;
     text-wrap: balance;
-    padding-left: 8rem;
     line-height: 1.2;
     color: white;
     letter-spacing: -0.05em;
-
-    @media (max-width: 768px) {
-      padding-left: 4rem;
-    }
-    @media (max-width: 600px) {
-      font-size: 4rem;
-    }
   }
-}
 
-.strip {
-  position: relative;
-  border-bottom: 1px solid rgb(134, 134, 134);
-  padding-bottom: 8rem;
-  margin: 0 5rem 0 5rem;
-
-  .buttonContainer {
-    position: absolute;
-    left: 70%;
-
-    @media (max-width: 768px) {
-      top: 20%;
-      left: 65%;
-    }
-    @media (max-width: 420px) {
-      top: 20%;
-      left: 55%;
-    }
-  }
-}
-
-.stripForm {
-  position: relative;
-  border-bottom: 1px solid rgb(134, 134, 134);
-  padding-bottom: 8rem;
-  // margin: 0 5rem 0 5rem;
-
-  .button {
-    display: grid;
-    place-items: center;
-    width: 16rem;
-    height: 16rem;
-    left: 70%;
-    background-color: #455ce9;
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    cursor: pointer;
-    @media (max-width: 768px) {
-      width: 13rem;
-      height: 13rem;
-    }
-
-    p {
-      margin: 0px;
-      font-size: 1.5rem;
-      font-weight: 500;
-      z-index: 2;
+  .imageContainer {
+    display: flex;
+    align-items: end;
+    position: relative;
+    .contentImg {
+      width: 12rem;
+      height: 12rem;
       position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    svg {
+      transform: scale(2);
+      position: absolute;
+      top: 120%;
     }
   }
 }

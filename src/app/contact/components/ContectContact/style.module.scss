@@ -1,0 +1,31 @@
+.stripForm {
+  position: relative;
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding-bottom: 8rem;
+  // margin: 0 5rem 0 5rem;
+
+  .button {
+    display: grid;
+    place-items: center;
+    width: 16rem;
+    height: 16rem;
+    left: 70%;
+    background-color: #455ce9;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    @media (max-width: 768px) {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    p {
+      margin: 0px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      z-index: 2;
+      position: relative;
+    }
+  }
+}
