@@ -1,7 +1,7 @@
 .content {
   display: flex;
   align-items: center;
-  margin-top: 15rem;
+  padding-top: 15rem;
 
   h2 {
     display: flex;
@@ -28,7 +28,8 @@
     svg {
       transform: scale(2);
       position: absolute;
-      top: 120%;
+      top: 130%;
+      left: 0%;
     }
   }
 }

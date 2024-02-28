@@ -3,6 +3,7 @@ import Rounded from "@/common/RoundedButton";
 import Container from "@/components/Shared/Container";
 import { motion } from "framer-motion";
 import styles from "./style.module.scss";
+import ContactDetails from "../ContactDetails/ContactDetails";
 
 const ContentContact = () => {
   const anim = (variants) => {
@@ -18,15 +19,15 @@ const ContentContact = () => {
   };
 
   return (
-    <Container className="flex items-center lg:px-72">
+    <Container className="grid grid-cols-3 lg:pl-72">
       <motion.div
         {...anim(slide)}
-        className="container grid md:gap-8 lg:grid-cols-3 lg:gap-12 xl:gap-24">
-        <div className="space-y-8 lg:col-span-2">
-          <div className="py-10 pt-48 space-y-6">
+        className="container grid col-span-2 md:gap-8 lg:grid-cols-3 lg:gap-12 xl:gap-24">
+        <div className="space-y-8 lg:col-span-3">
+          <div className="py-10 pt-48 space-y-6 ">
             <label
               htmlFor="name"
-              className="block py-20 text-4xl italic font-bold text-gray-300 border-t-2 border-gray-50/10">
+              className="block pt-20 text-4xl italic font-bold text-gray-300 border-t-2 border-gray-50/10">
               ¿Cuál es tu nombre?
             </label>
             <input
@@ -72,6 +73,7 @@ const ContentContact = () => {
           </div>
         </div>
       </motion.div>
+      <ContactDetails />
     </Container>
   );
 };

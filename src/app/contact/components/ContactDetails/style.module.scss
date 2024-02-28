@@ -1,0 +1,32 @@
+.containerDetails {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1.3rem;
+  gap: 1rem;
+  align-items: start;
+
+  a,
+  p {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    &::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: white;
+      display: block;
+      margin-top: 2px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.2s linear;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
