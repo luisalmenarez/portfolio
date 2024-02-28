@@ -20,7 +20,7 @@ const TitleContact = () => {
 
   return (
     <article className={styles.content}>
-      <Container className="flex gap-40 lg:pl-72">
+      <Container className="flex gap-4 md:gap-40 lg:pl-72">
         <motion.h2 {...anim(opacity)}>
           <span>¡Comencemos un</span>
           <span>proyecto juntos!</span>

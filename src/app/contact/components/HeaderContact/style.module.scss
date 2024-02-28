@@ -1,5 +1,5 @@
 .content {
-  display: flex;
+  display: grid;
   align-items: center;
   padding-top: 15rem;
 
@@ -12,12 +12,22 @@
     line-height: 1.2;
     color: white;
     letter-spacing: -0.05em;
+    @media (max-width: 768px) {
+      order: 2;
+      font-size: 7vw;
+
+      justify-content: end;
+    }
   }
 
   .imageContainer {
-    display: flex;
+    display: grid;
     align-items: end;
     position: relative;
+    @media (max-width: 768px) {
+      order: 1;
+      margin-left: 2rem;
+    }
     .contentImg {
       width: 12rem;
       height: 12rem;
@@ -30,6 +40,10 @@
       position: absolute;
       top: 130%;
       left: 0%;
+
+      @media (max-width: 768px) {
+        transform: rotate(20deg) scale(2);
+      }
     }
   }
 }

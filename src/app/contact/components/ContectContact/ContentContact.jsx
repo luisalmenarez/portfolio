@@ -1,11 +1,15 @@
+"use client";
 import { slide } from "@/app/assets/anim";
 import Rounded from "@/common/RoundedButton";
 import Container from "@/components/Shared/Container";
 import { motion } from "framer-motion";
 import styles from "./style.module.scss";
 import ContactDetails from "../ContactDetails/ContactDetails";
+import { useForm } from "react-hook-form";
 
 const ContentContact = () => {
+  const { register, handleSubmit } = useForm();
+
   const anim = (variants) => {
     return {
       initial: "initial",
@@ -19,11 +23,15 @@ const ContentContact = () => {
   };
 
   return (
-    <Container className="grid grid-cols-3 lg:pl-72">
+    <Container className="grid md:grid-cols-3 lg:pl-72">
       <motion.div
         {...anim(slide)}
-        className="container grid col-span-2 md:gap-8 lg:grid-cols-3 lg:gap-12 xl:gap-24">
-        <div className="space-y-8 lg:col-span-3">
+        className="container grid order-2 md:order-1 md:col-span-2 md:gap-8 lg:grid-cols-3 lg:gap-12 xl:gap-24">
+        <form
+          onSubmit={handleSubmit((data) => {
+            console.log(data);
+          })}
+          className="space-y-8 lg:col-span-3">
           <div className="py-10 pt-48 space-y-6 ">
             <label
               htmlFor="name"
@@ -34,6 +42,7 @@ const ContentContact = () => {
               id="name"
               className="w-full px-4 py-8 text-2xl text-gray-200 bg-transparent border-b-2 rounded-md border-gray-50/10 focus:outline-none"
               placeholder="John Doe *"
+              {...register("name")}
             />
           </div>
           <div className="py-10 space-y-6">
@@ -47,6 +56,7 @@ const ContentContact = () => {
               className="w-full px-4 py-8 text-2xl bg-transparent border-b-2 rounded-md border-gray-50/10 text-gray-50 focus:outline-none"
               placeholder="john@doe.com *"
               type="email"
+              {...register("email")}
             />
           </div>
           <div className="py-10 space-y-6">
@@ -60,18 +70,23 @@ const ContentContact = () => {
               id="message"
               placeholder="Hola Luis, me gustaría tenerte en nuestro equipo... *"
               style={{ resize: "none" }}
+              {...register("message")}
             />
           </div>
           <div className="grid w-full">
             <motion.div className={styles.stripForm}>
               <article className={styles.buttonContainer}>
-                <Rounded backgroundColor={"#334BD3"} className={styles.button}>
-                  <p>Enviar</p>
-                </Rounded>
+                <button type="submit">
+                  <Rounded
+                    backgroundColor={"#334BD3"}
+                    className={styles.button}>
+                    <p>Enviar</p>
+                  </Rounded>
+                </button>
               </article>
             </motion.div>
           </div>
-        </div>
+        </form>
       </motion.div>
       <ContactDetails />
     </Container>

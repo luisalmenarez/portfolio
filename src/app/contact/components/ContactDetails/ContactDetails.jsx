@@ -22,7 +22,9 @@ const ContactDetails = () => {
   };
 
   return (
-    <motion.section {...anim(slide)} className="text-white px-28 pt-44">
+    <motion.section
+      {...anim(slide)}
+      className="order-1 px-4 text-white md:order-2 md:px-14 lg:px-28 pt-44">
       <h3 className="mb-4 text-xl italic uppercase text-gray-200/50">
         Datos de contacto
       </h3>
