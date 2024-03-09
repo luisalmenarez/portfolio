@@ -1,16 +1,18 @@
 "use client";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import Landing from "@/components/Landing";
-import Projects from "@/components/Projects";
-import Description from "@/components/Description";
-import SlidingImages from "@/components/SlidingImages";
-import Contact from "@/components/Contact";
-import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
-import Footer from "@/components/Footer";
 import { useMediaQuery } from "react-responsive";
+import {
+  Landing,
+  Projects,
+  Description,
+  SlidingImages,
+  Contact,
+  Preloader,
+  Footer,
+} from "@/components";
 
 const useRouter = dynamic(() => import("next/router"), { ssr: false });
 
