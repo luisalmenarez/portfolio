@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #455ce9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.gallery {
+  width: 80%;
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  margin-top: 10rem;
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}

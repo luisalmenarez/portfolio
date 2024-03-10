@@ -1,0 +1,30 @@
+.project {
+  border-top: 1px solid #c9c9c9;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 5rem;
+  }
+}
+
+.project p {
+  font-size: 5vw;
+  font-weight: 500;
+  margin: 0px;
+}
+.project p:nth-of-type(1) {
+  margin-right: 0.75vw;
+}
+.project p:nth-of-type(2) {
+  margin-left: 0.75vw;
+}
+.project:last-of-type {
+  border-bottom: 1px solid #c9c9c9;
+}
+.project img {
+  width: 12vw;
+}

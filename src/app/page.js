@@ -13,6 +13,7 @@ import {
   Preloader,
   Footer,
 } from "@/components";
+import ProjectsGallery from "@/components/ProjectsGallery/ProjectsGallery";
 
 const useRouter = dynamic(() => import("next/router"), { ssr: false });
 
@@ -56,7 +57,8 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
-      <Projects />
+      {/* <Projects /> */}
+      <ProjectsGallery />
       <SlidingImages />
       {isMobile ? <Footer /> : <Contact />}
     </main>
